@@ -43,14 +43,16 @@ namespace HonourSelfCheckoutServer.Controllers
 
             var dbUser = await _databaseContext.Users.FirstOrDefaultAsync(u => u.Email == loginRequest.Email);
 
-            /*
+            
             var inputHash = HashPassword(loginRequest.Password);
             // Log to compare hashes
             Console.WriteLine($"Input Hash: {inputHash}");
             Console.WriteLine($"Stored Hash: {dbUser.Password}");
-            */
+            Console.WriteLine($"Input Email: {loginRequest.Email}");
+            Console.WriteLine($"Stored Email:  {dbUser.Email}");
+            
 
-            if (dbUser == null || dbUser.Password != HashPassword(loginRequest.Password).ToLower())
+            if (dbUser == null || dbUser.Password.ToLower() != HashPassword(loginRequest.Password).ToLower())
                 return Unauthorized(new { Message = "Invalid email or password" });
 
             return Ok(new { Message = "Login successful", UserId = dbUser.UserId });

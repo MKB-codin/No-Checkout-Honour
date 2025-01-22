@@ -34,11 +34,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.AppShell.x
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/MainPage.xaml]
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MainPage.xaml
 
 [C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\receiptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "Models\\LoginRequest.cs",
@@ -78,12 +78,11 @@
               "RelativeToolTip": "Models\\LoginRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T18:15:45.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T18:15:45.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
@@ -120,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -128,7 +127,8 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:34:06.536Z"
+              "WhenOpened": "2024-12-10T16:34:06.536Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

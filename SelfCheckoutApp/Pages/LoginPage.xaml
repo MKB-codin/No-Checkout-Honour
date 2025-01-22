@@ -3,11 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SelfCheckoutApp.Pages.LoginPage"
              Title="Login">
-    <StackLayout Padding="30" Spacing="10" VerticalOptions="Center">
-        <Label Text="Welcome to NoCheckout" FontSize="24" HorizontalOptions="Center" />
-        <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
-        <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
-        <Button Text="Login" Clicked="OnLoginClicked" />
-        <Label x:Name="ErrorMessage" TextColor="Red" IsVisible="False" />
-    </StackLayout>
+
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="StartAndExpand">
+        <!-- Welcome Label -->
+        <Label Text="Welcome to NoCheckout" 
+               FontSize="32" 
+               HorizontalOptions="Center" />
+
+        <!-- Email Entry -->
+        <Entry x:Name="EmailEntry" 
+               Placeholder="Email" 
+               Keyboard="Email" />
+
+        <!-- Password Entry -->
+        <Entry x:Name="PasswordEntry" 
+               Placeholder="Password" 
+               IsPassword="True" />
+
+        <!-- Login Button -->
+        <Button Text="Log In" 
+                Clicked="OnLoginClicked" 
+                HorizontalOptions="Fill" />
+
+        <!-- Error Message -->
+        <Label x:Name="ErrorMessage" 
+               TextColor="Red" 
+               IsVisible="False" 
+               HorizontalOptions="Center" />
+
+        <!-- Or Section -->
+        <Grid ColumnDefinitions="*,Auto,*" VerticalOptions="Center" HorizontalOptions="Fill">
+            <BoxView Grid.Column="0" HeightRequest="1" Color="Gray" VerticalOptions="Center" />
+            <Label Grid.Column="1" Text="  or  " FontSize="16" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center" />
+            <BoxView Grid.Column="2" HeightRequest="1" Color="Gray" VerticalOptions="Center" />
+        </Grid>
+
+
+
+
+        <!-- Sign Up Button -->
+        <Button Text="Sign Up" 
+                Clicked="OnSignUpClicked" 
+                HorizontalOptions="Fill" />
+    </VerticalStackLayout>
 </ContentPage>

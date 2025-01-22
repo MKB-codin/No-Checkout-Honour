@@ -12,7 +12,13 @@ namespace SelfCheckoutApp.Pages
             InitializeComponent();
 
 
-            _httpClient = new HttpClient { BaseAddress = new Uri("https://192.168.0.41:7249") };
+            _httpClient = new HttpClient(new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
+            })
+            {
+                BaseAddress = new Uri("https://192.168.0.41:7249")
+            };
 
         }
 
@@ -59,6 +65,12 @@ namespace SelfCheckoutApp.Pages
                 ErrorMessage.IsVisible = true;
             }
         }
+
+        private async void OnSignUpClicked(object sender, EventArgs e)
+        {
+            // await Navigation.PushAsync(new SignUpPage()); 
+        }
+
         private bool IsValidEmail(string email)
         {
             string emialPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";

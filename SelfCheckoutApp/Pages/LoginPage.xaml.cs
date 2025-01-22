@@ -12,7 +12,7 @@ namespace SelfCheckoutApp.Pages
             InitializeComponent();
 
 
-            _httpClient = new HttpClient { BaseAddress = new Uri("https://localhost:5001") };
+            _httpClient = new HttpClient { BaseAddress = new Uri("https://192.168.0.41:7249") };
 
         }
 

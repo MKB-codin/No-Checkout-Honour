@@ -51,7 +51,7 @@ namespace SelfCheckoutApp.Pages
                 if (response.IsSuccessStatusCode)
                 {
                     await DisplayAlert("Success", "Login successful!", "OK");
-                    // remmeber to add the next page navi here
+                    //add where to go after logging in :]
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace SelfCheckoutApp.Pages
 
         private async void OnSignUpClicked(object sender, EventArgs e)
         {
-            // await Navigation.PushAsync(new SignUpPage()); 
+            await Navigation.PushAsync(new SignUpPage());
         }
 
         private bool IsValidEmail(string email)

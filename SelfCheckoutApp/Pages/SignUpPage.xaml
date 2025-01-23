@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelfCheckoutApp.Pages.SignUpPage"
+             Title="Sign Up">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="StartAndExpand">
+            <!-- Page Title -->
+            <Label Text="Create an Account" 
+                   FontSize="32" 
+                   HorizontalOptions="Center" />
+
+            <!-- Name Entry -->
+            <Entry x:Name="NameEntry" 
+                   Placeholder="Name" 
+                   Keyboard="Text" />
+
+            <!-- Email Entry -->
+            <Entry x:Name="EmailEntry" 
+                   Placeholder="Email" 
+                   Keyboard="Email" />
+
+            <!-- Phone Entry -->
+            <Entry x:Name="PhoneEntry" 
+                   Placeholder="Phone Number" 
+                   Keyboard="Numeric" 
+                   MaxLength="10" />
+
+            <!-- Password Entry -->
+            <Entry x:Name="PasswordEntry" 
+                   Placeholder="Password" 
+                   IsPassword="True" />
+
+            <!-- Confirm Password Entry -->
+            <Entry x:Name="ConfirmPasswordEntry" 
+                   Placeholder="Confirm Password" 
+                   IsPassword="True" />
+
+            <!-- Error Message -->
+            <Label x:Name="ErrorMessage" 
+                   TextColor="Red" 
+                   IsVisible="False" 
+                   HorizontalOptions="Center" />
+
+            <!-- Sign Up Button -->
+            <Button Text="Sign Up" 
+                    Clicked="OnSignUpClicked" 
+                    HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

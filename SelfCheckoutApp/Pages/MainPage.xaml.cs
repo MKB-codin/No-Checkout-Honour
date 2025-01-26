@@ -1,25 +1,38 @@
-﻿namespace SelfCheckoutApp
+﻿using System.Windows.Input;
+
+namespace SelfCheckoutApp.Pages
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        public ICommand LogoutCommand { get; }
 
         public MainPage()
         {
             InitializeComponent();
+
+            // Bind the logout command to the back button behavior
+            LogoutCommand = new Command(async () =>
+            {
+                bool confirmLogout = await DisplayAlert("Logout", "Are you sure you want to log out?", "Logout", "No");
+                if (confirmLogout)
+                {
+                    await Navigation.PopToRootAsync(); // Navigate back to LoginPage
+                }
+            });
+
+            BindingContext = this;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnStartShoppingClicked(object sender, EventArgs e)
         {
-            count++;
+            // Navigate to the Start Shopping page (to be implemented)
+            //await Navigation.PushAsync(new ShoppingPage()); 
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private async void OnReceiptsClicked(object sender, EventArgs e)
+        {
+            // Navigate to the Receipts page (to be implemented)
+            //await Navigation.PushAsync(new ReceiptsPage()); 
         }
     }
-
 }

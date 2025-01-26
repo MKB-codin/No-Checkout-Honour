@@ -51,7 +51,7 @@ namespace SelfCheckoutApp.Pages
                 if (response.IsSuccessStatusCode)
                 {
                     await DisplayAlert("Success", "Login successful!", "OK");
-                    //add where to go after logging in :]
+                    await Navigation.PushAsync(new MainPage());
                 }
                 else
                 {

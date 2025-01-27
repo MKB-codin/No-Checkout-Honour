@@ -48,6 +48,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HonourSelfCheckoutServer.Controllers.StoresController",
+    "Method": "GetAllStores",
+    "RelativePath": "api/Stores/GetAllStores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HonourSelfCheckoutServer.Controllers.UsersController",
     "Method": "Login",
     "RelativePath": "api/Users/Login",

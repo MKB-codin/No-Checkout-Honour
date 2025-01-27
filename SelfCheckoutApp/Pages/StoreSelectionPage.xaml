@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelfCheckoutApp.Pages.StoreSelectionPage"
+             Title="Select Store">
+
+    <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="StartAndExpand">
+        <!-- Page Title -->
+        <Label Text="Select a Store" FontSize="24" HorizontalOptions="Center" />
+
+        <!-- Stores List -->
+        <CollectionView x:Name="StoresCollectionView" SelectionMode="Single" 
+                        SelectionChanged="OnStoreSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5" BackgroundColor="LightGray" CornerRadius="8">
+                        <Label Text="{Binding StoreName}" FontSize="18" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

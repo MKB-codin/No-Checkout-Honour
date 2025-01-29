@@ -4,17 +4,32 @@
              x:Class="SelfCheckoutApp.Pages.StoreSelectionPage"
              Title="Select Store">
 
-    <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="StartAndExpand">
-        <!-- Page Title -->
-        <Label Text="Select a Store" FontSize="24" HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Select a Store"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
 
-        <!-- Stores List -->
-        <CollectionView x:Name="StoresCollectionView" SelectionMode="Single" 
-                        SelectionChanged="OnStoreSelected">
+        <!-- CollectionView for Stores -->
+        <CollectionView x:Name="StoresCollectionView"
+                        SelectionMode="None">
+            <!-- Remove SelectionMode -->
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="10" Margin="5" BackgroundColor="LightGray" CornerRadius="8">
-                        <Label Text="{Binding StoreName}" FontSize="18" />
+                    <Frame Padding="10"
+                           Margin="5"
+                           BackgroundColor="LightGray"
+                           HasShadow="True">
+                        <Label Text="{Binding StoreName}"
+                               FontSize="20"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" />
+
+                        <!-- Tap Gesture -->
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnStoreTapped" CommandParameter="{Binding}" />
+                        </Frame.GestureRecognizers>
+
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

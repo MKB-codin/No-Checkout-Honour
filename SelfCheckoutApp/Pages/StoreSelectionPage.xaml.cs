@@ -98,22 +98,23 @@ namespace SelfCheckoutApp.Pages
 
 
 
-        private async void OnStoreSelected(object sender, SelectionChangedEventArgs e)
+        private async void OnStoreTapped(object sender, TappedEventArgs e)
         {
-            var selectedStore = e.CurrentSelection.FirstOrDefault() as Store;
-
-            if (selectedStore != null)
+            if (e.Parameter is Store selectedStore)
             {
                 bool confirm = await DisplayAlert("Confirm Store",
                     $"You selected {selectedStore.StoreName}. Is this correct?", "Yes", "No");
 
                 if (confirm)
                 {
-                    // Navigate to the next step (e.g., scan item page)
-                    //await Navigation.PushAsync(new ScanItemPage(selectedStore));
+                    Console.WriteLine($"Navigating to ScanItemPage with {selectedStore.StoreName}...");
+
+                    // Navigate to the next step (scan item page)
+                    await Navigation.PushAsync(new ScanItemPage(selectedStore));
                 }
             }
         }
+
     }
 
     public class Store

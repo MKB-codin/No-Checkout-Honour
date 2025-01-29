@@ -7,13 +7,19 @@ namespace SelfCheckoutApp.Pages
     public partial class StoreSelectionPage : ContentPage
     {
         private readonly HttpClient _httpClient;
-        private const string GeocodingApiKey = "YOUR_GEOCODING_API_KEY"; // Replace with your API key
+        private const string GeocodingApiKey = "AIzaSyBvR3a8ZinM40HwLm7hp2mEX2hPTGlDERQ";
         private const string GeocodingApiUrl = "https://maps.googleapis.com/maps/api/geocode/json"; // Example: Google Maps API
 
         public StoreSelectionPage()
         {
             InitializeComponent();
-            _httpClient = new HttpClient { BaseAddress = new Uri("https://192.168.0.41:7249") }; // Update with your server IP
+            _httpClient = new HttpClient(new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
+            })
+            {
+                BaseAddress = new Uri("https://192.168.0.41:7249")
+            };
             LoadStores();
         }
 
@@ -23,9 +29,7 @@ namespace SelfCheckoutApp.Pages
             {
                 // Fetch stores from server
                 var stores = await _httpClient.GetFromJsonAsync<List<Store>>("/api/Stores/GetAllStores");
-
-                // Get user's location (replace with proper geolocation API for production)
-                var userLocation = new GeoCoordinate(51.509865, -0.118092); // Example: London coordinates
+                var userLocation = new GeoCoordinate(51.509865, -0.118092); // Obviously fake coords for security. :]
 
                 // Retrieve latitude and longitude for each store
                 foreach (var store in stores)
@@ -55,31 +59,44 @@ namespace SelfCheckoutApp.Pages
         {
             try
             {
-                // Call the geocoding API
                 string url = $"{GeocodingApiUrl}?address={Uri.EscapeDataString(address)}&key={GeocodingApiKey}";
                 var response = await _httpClient.GetAsync(url);
 
-                if (response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                 {
-                    var jsonResponse = await response.Content.ReadAsStringAsync();
-                    var jsonObject = JObject.Parse(jsonResponse);
-
-                    // Parse the latitude and longitude
-                    var location = jsonObject["results"]?[0]?["geometry"]?["location"];
-                    double latitude = location?["lat"]?.Value<double>() ?? 0;
-                    double longitude = location?["lng"]?.Value<double>() ?? 0;
-
-                    return (latitude, longitude);
+                    throw new Exception("Failed to contact the Geocoding API.");
                 }
 
-                throw new Exception("Failed to fetch coordinates.");
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var jsonObject = JObject.Parse(jsonResponse);
+
+                // Check if there are valid results
+                var results = jsonObject["results"];
+                if (results == null || !results.Any())
+                {
+                    throw new Exception("No valid location data returned.");
+                }
+
+                // Extract latitude and longitude safely
+                var location = results[0]?["geometry"]?["location"];
+                if (location == null)
+                {
+                    throw new Exception("Location data is missing.");
+                }
+
+                double latitude = location["lat"]?.Value<double>() ?? 0;
+                double longitude = location["lng"]?.Value<double>() ?? 0;
+
+                return (latitude, longitude);
             }
-            catch
+            catch (Exception ex)
             {
-                // Return default coordinates if the address cannot be resolved
+                await DisplayAlert("Geocoding Error", $"Failed to fetch coordinates: {ex.Message}", "OK");
                 return (0, 0);
             }
         }
+
+
 
         private async void OnStoreSelected(object sender, SelectionChangedEventArgs e)
         {

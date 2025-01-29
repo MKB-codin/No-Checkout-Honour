@@ -26,7 +26,7 @@ namespace SelfCheckoutApp.Pages
         private async void OnStartShoppingClicked(object sender, EventArgs e)
         {
             // Navigate to the Start Shopping page (to be implemented)
-            //await Navigation.PushAsync(new ShoppingPage()); 
+            await Navigation.PushAsync(new StoreSelectionPage()); 
         }
 
         private async void OnReceiptsClicked(object sender, EventArgs e)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HonourSelfCheckoutServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+754316319f9dacabe963fdc6a050a1c9be24ce1e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+358baa64c941147affbb7bef7a3abd7ebb302dfc")]
 [assembly: System.Reflection.AssemblyProductAttribute("HonourSelfCheckoutServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HonourSelfCheckoutServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

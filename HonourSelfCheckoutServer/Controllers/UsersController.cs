@@ -57,7 +57,12 @@ namespace HonourSelfCheckoutServer.Controllers
             if (dbUser == null || dbUser.Password.ToLower() != HashPassword(loginRequest.Password).ToLower())
                 return Unauthorized(new { Message = "Invalid email or password" });
 
-            return Ok(new { Message = "Login successful", UserId = dbUser.UserId });
+            return Ok(new
+            {
+                Message = "Login successful",
+                    UserId = dbUser.UserId,
+                    Name = dbUser.Name
+            });
         }
 
 

@@ -329,3 +329,4 @@ C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\HonourSelfCheckoutServe
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\HonourSelfCheckoutServer\obj\Debug\net8.0\HonourSelfCheckoutServer.pdb
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\HonourSelfCheckoutServer\obj\Debug\net8.0\HonourSelfCheckoutServer.genruntimeconfig.cache
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\HonourSelfCheckoutServer\obj\Debug\net8.0\ref\HonourSelfCheckoutServer.dll
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\HonourSelfCheckoutServer\bin\Debug\net8.0\System.Device.Portable.dll

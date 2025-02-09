@@ -50,8 +50,18 @@ namespace SelfCheckoutApp.Pages
 
                 if (response.IsSuccessStatusCode)
                 {
-                    await DisplayAlert("Success", "Login successful!", "OK");
-                    await Navigation.PushAsync(new MainPage());
+                    var responseData = await response.Content.ReadFromJsonAsync<LoginResponse>();
+
+                    if (responseData != null)
+                    {
+                        Preferences.Set("UserId", responseData.UserId);
+                        Preferences.Set("UserName", responseData.Name);
+
+                        await DisplayAlert("Success", "Login successful!", "OK");
+
+                        // Navigate to the next page
+                        await Navigation.PushAsync(new MainPage());
+                    }
                 }
                 else
                 {
@@ -75,6 +85,13 @@ namespace SelfCheckoutApp.Pages
         {
             string emialPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, emialPattern);
+        }
+
+        public class LoginResponse
+        {
+            public string Message { get; set; }
+            public int UserId { get; set; }
+            public string Name { get; set; }
         }
     }
 

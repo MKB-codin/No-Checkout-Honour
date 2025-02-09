@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KObnL8/7aKU=",
+  "dgSpecHash": "7RRe7J1p60Q=",
   "success": true,
   "projectFilePath": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
   "expectedPackageFiles": [
@@ -26,7 +26,7 @@
     "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.maui.graphics\\9.0.30\\microsoft.maui.graphics.9.0.30.nupkg.sha512",
     "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\9.0.30\\microsoft.maui.graphics.win2d.winui.desktop.9.0.30.nupkg.sha512",
     "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.maui.resizetizer\\9.0.30\\microsoft.maui.resizetizer.9.0.30.nupkg.sha512",
-    "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.0\\microsoft.net.illink.tasks.9.0.0.nupkg.sha512",
+    "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.1\\microsoft.net.illink.tasks.9.0.1.nupkg.sha512",
     "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.web.webview2\\1.0.2792.45\\microsoft.web.webview2.1.0.2792.45.nupkg.sha512",
     "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.windowsappsdk\\1.6.241114003\\microsoft.windowsappsdk.1.6.241114003.nupkg.sha512",
@@ -134,7 +134,7 @@
     "C:\\Users\\mkbof\\.nuget\\packages\\zxing.net\\0.16.10\\zxing.net.0.16.10.nupkg.sha512",
     "C:\\Users\\mkbof\\.nuget\\packages\\zxing.net.maui\\0.4.0\\zxing.net.maui.0.4.0.nupkg.sha512",
     "C:\\Users\\mkbof\\.nuget\\packages\\zxing.net.maui.controls\\0.4.0\\zxing.net.maui.controls.0.4.0.nupkg.sha512",
-    "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.54\\microsoft.windows.sdk.net.ref.10.0.19041.54.nupkg.sha512"
+    "C:\\Users\\mkbof\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
   ],
   "logs": [
     {

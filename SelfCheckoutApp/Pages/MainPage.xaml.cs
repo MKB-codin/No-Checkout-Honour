@@ -16,7 +16,7 @@ namespace SelfCheckoutApp.Pages
                 bool confirmLogout = await DisplayAlert("Logout", "Are you sure you want to log out?", "Logout", "No");
                 if (confirmLogout)
                 {
-                    await Navigation.PopToRootAsync(); // Navigate back to LoginPage
+                    await Navigation.PopToRootAsync(); 
                 }
             });
 
@@ -25,7 +25,6 @@ namespace SelfCheckoutApp.Pages
 
         private async void OnStartShoppingClicked(object sender, EventArgs e)
         {
-            // Navigate to the Start Shopping page (to be implemented)
             await Navigation.PushAsync(new StoreSelectionPage()); 
         }
 

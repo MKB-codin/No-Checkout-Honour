@@ -58,6 +58,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HonourSelfCheckoutServer.Controllers.StoresController",
+    "Method": "GetNearestStores",
+    "RelativePath": "api/Stores/GetNearestStores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLatitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "userLongitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HonourSelfCheckoutServer.Controllers.UsersController",
     "Method": "Login",
     "RelativePath": "api/Users/Login",

@@ -15,6 +15,7 @@
     </PackageReference>
     <PackageReference Include="Stripe.net" Version="47.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="System.Device.Location.Portable" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

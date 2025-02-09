@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using ZXing.Net.Maui;
+using ZXing.Net.Maui.Controls;
 
 namespace SelfCheckoutApp.Pages 
 {
@@ -12,9 +13,15 @@ namespace SelfCheckoutApp.Pages
         {
             InitializeComponent();
             _selectedStore = store;
-            _httpClient = new HttpClient { BaseAddress = new Uri("https://192.168.0.41:7249") };
-
+            _httpClient = new HttpClient(new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
+            })
+            {
+                BaseAddress = new Uri("https://192.168.0.41:7249")
+            };
             StoreLabel.Text = $"Shopping at {_selectedStore.StoreName}";
+            barcodeReader = this.FindByName<CameraBarcodeReaderView>("barcodeReader");
         }
 
         private async void OnBarcodeDetected(object sender, BarcodeDetectionEventArgs e)
@@ -76,6 +83,18 @@ namespace SelfCheckoutApp.Pages
         private void barcodeReader_BarcodesDetected(object sender, BarcodeDetectionEventArgs e)
         {
 
+        }
+
+        protected override void OnDisappearing() // Stop camera use when no longer on page
+        {
+            base.OnDisappearing();
+
+            if (barcodeReader != null)
+            {
+                barcodeReader.IsDetecting = false; 
+                barcodeReader.IsVisible = false;
+                barcodeReader.Handler?.DisconnectHandler();
+            }
         }
     }
 

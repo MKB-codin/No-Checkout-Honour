@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelfCheckoutApp.Pages.BasketPage"
+             Title="Your Basket">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <!-- Basket List -->
+        <CollectionView ItemsSource="{Binding CartItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Padding="10" Spacing="15" VerticalOptions="Center">
+                        <Label Text="{Binding Name}" FontSize="18" />
+                        <Label Text="{Binding Price, StringFormat='£{0:F2}'}" FontSize="18" />
+
+                        <Button Text="-" Clicked="OnDecreaseQuantity" />
+                        <Label Text="{Binding Quantity}" FontSize="18" WidthRequest="30" HorizontalTextAlignment="Center"/>
+                        <Button Text="+" Clicked="OnIncreaseQuantity" />
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Total Price -->
+        <Label x:Name="TotalPriceLabel" FontSize="20" HorizontalOptions="Center" />
+
+        <!-- Buttons -->
+        <Button Text="Add Item" Clicked="OnAddItemClicked" />
+        <Button Text="Checkout" Clicked="OnCheckoutClicked" BackgroundColor="Green" TextColor="White"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

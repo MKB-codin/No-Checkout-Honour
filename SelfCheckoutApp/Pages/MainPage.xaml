@@ -9,13 +9,15 @@
     </Shell.BackButtonBehavior>
 
     <VerticalStackLayout Padding="20" Spacing="30" VerticalOptions="StartAndExpand">
-        <!-- Start Shopping Button -->
+
+        <Label x:Name="WelcomeLabel" FontSize="24" HorizontalTextAlignment="Center" />
+        
+
         <Button Text="Start Shopping"
                 Clicked="OnStartShoppingClicked"
                 HorizontalOptions="FillAndExpand"
                 FontSize="18" />
 
-        <!-- Receipts Button -->
         <Button Text="Receipts"
                 Clicked="OnReceiptsClicked"
                 HorizontalOptions="FillAndExpand"

@@ -1,12 +1,13 @@
-﻿using System.Windows.Input;
+﻿using SelfCheckoutApp.Services;
+using System.Windows.Input;
 
 namespace SelfCheckoutApp.Pages
 {
     public partial class MainPage : ContentPage
     {
         public ICommand LogoutCommand { get; }
-
-        public MainPage()
+        private readonly UserSession _userSession;
+        public MainPage(UserSession userSession)
         {
             InitializeComponent();
 
@@ -16,16 +17,20 @@ namespace SelfCheckoutApp.Pages
                 bool confirmLogout = await DisplayAlert("Logout", "Are you sure you want to log out?", "Logout", "No");
                 if (confirmLogout)
                 {
-                    await Navigation.PopToRootAsync(); 
+                    _userSession.Clear();
+                    await Navigation.PopToRootAsync();
                 }
             });
 
+            _userSession = userSession;
+
+            WelcomeLabel.Text = $"Welcome, {_userSession.UserName}";
             BindingContext = this;
         }
 
         private async void OnStartShoppingClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new StoreSelectionPage()); 
+            await Navigation.PushAsync(new StoreSelectionPage(_userSession)); 
         }
 
         private async void OnReceiptsClicked(object sender, EventArgs e)

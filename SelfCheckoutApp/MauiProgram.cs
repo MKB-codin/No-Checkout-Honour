@@ -6,6 +6,7 @@ using ZXing.Net.Maui.Controls;
 using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Core;
 using Microsoft.Maui;
+using SelfCheckoutApp.Services;
 
 
 namespace SelfCheckoutApp
@@ -19,15 +20,18 @@ namespace SelfCheckoutApp
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkitCore()
-                .UseBarcodeReader() // Ensures ZXing is registered
+                .UseBarcodeReader() 
                 .ConfigureMauiHandlers(handlers =>
                 {
                     handlers.AddHandler(typeof(CameraBarcodeReaderView), typeof(CameraBarcodeReaderViewHandler));
-                }) // Correctly registers the camera barcode reader
+                })
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
+
+
+            builder.Services.AddSingleton<UserSession>();
 
 #if DEBUG
             builder.Logging.AddDebug();

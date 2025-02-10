@@ -1,3 +1,4 @@
+using SelfCheckoutApp.Services;
 using System.Net.Http.Json;
 using System.Text.RegularExpressions;
 
@@ -6,8 +7,9 @@ namespace SelfCheckoutApp.Pages
     public partial class LoginPage : ContentPage
     {
         private readonly HttpClient _httpClient;
+        private readonly UserSession _userSession;
 
-        public LoginPage()
+        public LoginPage(UserSession userSession)
         {
             InitializeComponent();
 
@@ -20,6 +22,7 @@ namespace SelfCheckoutApp.Pages
                 BaseAddress = new Uri("https://192.168.0.41:7249")
             };
 
+            _userSession = userSession;
         }
 
         private async void OnLoginClicked(object sender, EventArgs e)
@@ -54,13 +57,16 @@ namespace SelfCheckoutApp.Pages
 
                     if (responseData != null)
                     {
-                        Preferences.Set("UserId", responseData.UserId);
-                        Preferences.Set("UserName", responseData.Name);
+                        /*Preferences.Set("UserId", responseData.UserId);
+                        Preferences.Set("UserName", responseData.Name);*/
+
+                        _userSession.UserId = responseData.UserId;
+                        _userSession.UserName = responseData.Name;
 
                         await DisplayAlert("Success", "Login successful!", "OK");
 
                         // Navigate to the next page
-                        await Navigation.PushAsync(new MainPage());
+                        await Navigation.PushAsync(new MainPage(_userSession));
                     }
                 }
                 else

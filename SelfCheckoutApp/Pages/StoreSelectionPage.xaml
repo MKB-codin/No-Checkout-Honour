@@ -6,12 +6,15 @@
     Title="Select Store">
 
     <VerticalStackLayout Padding="20" Spacing="15">
-        <Label Text="Select a Store" 
-               FontSize="24" 
-               FontAttributes="Bold" 
-               HorizontalOptions="Center" />
+        <HorizontalStackLayout Grid.Row="0" HorizontalOptions="FillAndExpand">
+            <!-- Title -->
+            <Label Text="Select a Store"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand" />
+        </HorizontalStackLayout>
 
-        <!-- CollectionView with a Button for each store -->
+        <!-- CollectionView that displays each store as a button -->
         <CollectionView x:Name="StoresCollectionView" SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

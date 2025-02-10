@@ -1,3 +1,4 @@
+using SelfCheckoutApp.Services;
 using System.Net.Http.Json;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
@@ -8,11 +9,11 @@ namespace SelfCheckoutApp.Pages
     {
         private readonly HttpClient _httpClient;
         private bool _isProcessingBarcode = false;
-        private Store _selectedStore;
-        public ScanItemPage(Store store)
+        private readonly UserSession _userSession;
+        public ScanItemPage(UserSession userSession)
         {
             InitializeComponent();
-            _selectedStore = store;
+            _userSession = userSession;
             _httpClient = new HttpClient(new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
@@ -20,7 +21,7 @@ namespace SelfCheckoutApp.Pages
             {
                 BaseAddress = new Uri("https://192.168.0.41:7249")
             };
-            StoreLabel.Text = $"Shopping at {_selectedStore.StoreName}";
+            StoreLabel.Text = $"Shopping at {_userSession.StoreName}";
             barcodeReader = this.FindByName<CameraBarcodeReaderView>("barcodeReader");
         }
 

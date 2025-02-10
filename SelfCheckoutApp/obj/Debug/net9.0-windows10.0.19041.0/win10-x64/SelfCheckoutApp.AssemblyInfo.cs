@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SelfCheckoutApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+358baa64c941147affbb7bef7a3abd7ebb302dfc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8f6f6de78b9035b5c0018718d9995544b7170727")]
 [assembly: System.Reflection.AssemblyProductAttribute("SelfCheckoutApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SelfCheckoutApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

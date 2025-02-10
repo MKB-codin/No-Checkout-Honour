@@ -1,26 +1,30 @@
+using SelfCheckoutApp.Services;
 using System.Collections.ObjectModel;
 
 namespace SelfCheckoutApp.Pages
 {
     public partial class BasketPage : ContentPage
     {
-        public ObservableCollection<CartItem> CartItems { get; set; } = new ObservableCollection<CartItem>();
+        public ObservableCollection<Services.UserSession.CartItem> CartItems { get; set; }
         private double _totalPrice = 0;
-
-        public BasketPage()
+        private readonly UserSession _userSession;
+        public BasketPage(UserSession userSession)
         {
             InitializeComponent();
             BindingContext = this;
+            _userSession = userSession;
+
+            CartItems = new ObservableCollection<Services.UserSession.CartItem>(_userSession.CartItems);
             UpdateTotalPrice();
         }
 
         private void OnIncreaseQuantity(object sender, EventArgs e)
         {
             var button = sender as Button;
-            var item = button.BindingContext as CartItem;
+            var item = button.BindingContext as Services.UserSession.CartItem;
             if (item != null)
             {
-                item.Quantity++;
+                item.ItemQuantity++;
                 UpdateTotalPrice();
             }
         }
@@ -28,13 +32,13 @@ namespace SelfCheckoutApp.Pages
         private void OnDecreaseQuantity(object sender, EventArgs e)
         {
             var button = sender as Button;
-            var item = button.BindingContext as CartItem;
-            if (item != null && item.Quantity > 1)
+            var item = button.BindingContext as Services.UserSession.CartItem;
+            if (item != null && item.ItemQuantity > 1)
             {
-                item.Quantity--;
+                item.ItemQuantity--;
                 UpdateTotalPrice();
             }
-            else if (item.Quantity == 1)
+            else if (item.ItemQuantity == 1)
             {
                 CartItems.Remove(item); // Remove item if quantity reaches zero
             }
@@ -43,7 +47,7 @@ namespace SelfCheckoutApp.Pages
 
         private void UpdateTotalPrice()
         {
-            _totalPrice = CartItems.Sum(item => item.Price * item.Quantity);
+            _totalPrice = CartItems.Sum(item => item.ItemPrice * item.ItemQuantity);
             TotalPriceLabel.Text = $"Total: £{_totalPrice:F2}";
         }
 
@@ -70,12 +74,12 @@ namespace SelfCheckoutApp.Pages
             }
         }
 
-        public void AddItemToCart(CartItem item)
+        public void AddItemToCart(Services.UserSession.CartItem item)
         {
-            var existingItem = CartItems.FirstOrDefault(x => x.Name == item.Name);
+            var existingItem = CartItems.FirstOrDefault(x => x.ItemName == item.ItemName);
             if (existingItem != null)
             {
-                existingItem.Quantity++;
+                existingItem.ItemQuantity++;
             }
             else
             {
@@ -83,12 +87,5 @@ namespace SelfCheckoutApp.Pages
             }
             UpdateTotalPrice();
         }
-    }
-
-    public class CartItem
-    {
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public int Quantity { get; set; } = 1;
     }
 }

@@ -22,21 +22,21 @@
           "Microsoft.VisualStudio.DesignTools.MobileTapContracts": "17.0.0.0",
           "Microsoft.VisualStudio.DesignTools.TapContract": "17.0.0.0",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.2792.45",
-          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.54"
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
         "runtime": {
           "SelfCheckoutApp.dll": {}
         }
       },
-      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.54": {
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.57": {
         "runtime": {
           "Microsoft.Windows.SDK.NET.dll": {
             "assemblyVersion": "10.0.19041.38",
-            "fileVersion": "10.0.19041.52"
+            "fileVersion": "10.0.19041.55"
           },
           "WinRT.Runtime.dll": {
-            "assemblyVersion": "2.1.0.0",
-            "fileVersion": "2.1.6.47881"
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.48161"
           }
         }
       },
@@ -578,7 +578,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.54": {
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.57": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""

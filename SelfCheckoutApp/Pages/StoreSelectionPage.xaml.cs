@@ -2,14 +2,15 @@ using System.Net.Http.Json;
 using System.Device.Location;
 using Microsoft.Maui.Devices.Sensors;
 using Newtonsoft.Json.Linq;
+using SelfCheckoutApp.Services;
 
 namespace SelfCheckoutApp.Pages
 {
     public partial class StoreSelectionPage : ContentPage
     {
         private readonly HttpClient _httpClient;
-
-        public StoreSelectionPage()
+        private readonly UserSession _userSession;
+        public StoreSelectionPage(UserSession userSession)
         {
             InitializeComponent();
             _httpClient = new HttpClient(new HttpClientHandler
@@ -20,6 +21,8 @@ namespace SelfCheckoutApp.Pages
                 BaseAddress = new Uri("https://192.168.0.41:7249")
             };
 
+            _userSession = userSession;
+
             GetUserLocationAndLoadStores();
         }
 
@@ -27,8 +30,6 @@ namespace SelfCheckoutApp.Pages
         {
             try
             {
-                // Get the user's current location.
-                // In production, replace this with a robust geolocation API.
                 var location = await Geolocation.GetLastKnownLocationAsync();
                 if (location == null)
                 {
@@ -76,8 +77,9 @@ namespace SelfCheckoutApp.Pages
 
                 if (confirm)
                 {
-                    // Navigate to the Scan Item Page, passing the selected store.
-                    await Navigation.PushAsync(new ScanItemPage(selectedStore));
+                    _userSession.StoreId = selectedStore.StoreId;
+                    _userSession.StoreName = selectedStore.StoreName;
+                    await Navigation.PushAsync(new BasketPage(_userSession));
                 }
             }
         }

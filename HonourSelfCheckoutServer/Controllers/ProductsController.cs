@@ -21,6 +21,7 @@ namespace HonourSelfCheckoutServer.Controllers
         [HttpGet("{barcode}")]
         public async Task<IActionResult> GetProductByBarcode(string barcode)
         {
+            Console.WriteLine($"Barcode received {barcode}");
             var product = await _databaseContext.Products.FirstOrDefaultAsync( p => p.BarcodeId == barcode);
             if (product == null)
             {

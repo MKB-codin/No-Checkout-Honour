@@ -11,11 +11,11 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <HorizontalStackLayout Padding="10" Spacing="15" VerticalOptions="Center">
-                        <Label Text="{Binding Name}" FontSize="18" />
-                        <Label Text="{Binding Price, StringFormat='£{0:F2}'}" FontSize="18" />
+                        <Label Text="{Binding ItemName}" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding ItemPrice, StringFormat='£{0:F2}'}" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
                         <Button Text="-" Clicked="OnDecreaseQuantity" />
-                        <Label Text="{Binding Quantity}" FontSize="18" WidthRequest="30" HorizontalTextAlignment="Center"/>
+                        <Label Text="{Binding ItemQuantity}" FontSize="18" WidthRequest="30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                         <Button Text="+" Clicked="OnIncreaseQuantity" />
                     </HorizontalStackLayout>
                 </DataTemplate>

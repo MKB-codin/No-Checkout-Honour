@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +18,7 @@ namespace SelfCheckoutApp.Services
         public int StoreId { get; set; }
         public string StoreName { get; set; }
 
-        public List<CartItem> CartItems { get; set; } = new List<CartItem>();
+        public ObservableCollection<CartItem> CartItems { get; set; } = new ObservableCollection<CartItem>();
 
         public void Clear()
         {
@@ -23,14 +26,59 @@ namespace SelfCheckoutApp.Services
             UserName = string.Empty;
             StoreId = 0;
             StoreName = string.Empty;
-            CartItems = new List<CartItem>();
         }
 
-        public class CartItem
+        public class CartItem : INotifyPropertyChanged
         {
-            public string ItemName { get; set; }
-            public double ItemPrice { get; set; }
-            public int ItemQuantity { get; set; } = 1;
+            private string itemName;
+            private double itemPrice;
+            private int itemQuantity = 1;
+
+            public string ItemName
+            {
+                get => itemName;
+                set
+                {
+                    if (itemName != value)
+                    {
+                        itemName = value;
+                        OnPropertyChanged();
+                    }
+                }
+            }
+
+            public double ItemPrice
+            {
+                get => itemPrice;
+                set
+                {
+                    if (itemPrice != value)
+                    {
+                        itemPrice = value;
+                        OnPropertyChanged();
+                    }
+                }
+            }
+
+            public int ItemQuantity
+            {
+                get => itemQuantity;
+                set
+                {
+                    if (itemQuantity != value)
+                    {
+                        itemQuantity = value;
+                        OnPropertyChanged();
+                    }
+                }
+            }
+
+            public event PropertyChangedEventHandler PropertyChanged;
+
+            protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }

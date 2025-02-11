@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
-             x:Class="SelfCheckoutApp.Pages.ScanItemPage"
-             Title="Scan Item">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui.Controls"
+    x:Class="SelfCheckoutApp.Pages.ScanItemPage"
+    Title="Scan Item">
 
-    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="CenterAndExpand">
-        
-        <Label x:Name="StoreLabel" Text="Shopping at..." FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
-        <Label Text="Scan a Product" FontSize="24" HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="FillAndExpand">
+        <!-- Display the selected store name -->
+        <Label x:Name="StoreLabel" 
+               Text="Shopping at ..." 
+               FontSize="20" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" />
 
-        <!-- Barcode Scanner -->
+        <!-- Instruction -->
+        <Label Text="Scan a Product Barcode" 
+               FontSize="24" 
+               HorizontalOptions="Center" />
+
+        <!-- Barcode Scanner View -->
         <zxing:CameraBarcodeReaderView x:Name="barcodeReader"
-                                       BarcodesDetected="OnBarcodeDetected"
-                                       IsDetecting="True"
+                                       IsDetecting="False"
                                        VerticalOptions="FillAndExpand" />
-        <!-- Manual Barcode Entry -->
-        <Entry x:Name="BarcodeEntry" Placeholder="Enter barcode manually" />
-        <Button Text="Search" Clicked="OnSearchClicked" />
 
-        <!-- Error Message -->
-        <Label x:Name="ErrorMessage" TextColor="Red" IsVisible="False" HorizontalOptions="Center" />
+        <!-- Fallback: Manual Barcode Entry -->
+        <Entry x:Name="BarcodeEntry" 
+               Placeholder="Enter barcode manually" />
 
+        <Button Text="Search" 
+                Clicked="OnSearchClicked" 
+                HorizontalOptions="Fill" />
+
+        <!-- Error Message Display -->
+        <Label x:Name="ErrorMessage" 
+               TextColor="Red" 
+               IsVisible="False" 
+               HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

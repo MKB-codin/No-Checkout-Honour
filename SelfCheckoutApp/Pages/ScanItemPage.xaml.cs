@@ -3,6 +3,7 @@ using ZXing.Net.Maui;
 using SelfCheckoutApp.Services;
 using System.Linq;
 using System.Threading.Tasks;
+using ZXing;
 
 namespace SelfCheckoutApp.Pages
 {
@@ -32,9 +33,6 @@ namespace SelfCheckoutApp.Pages
             {
                 Navigation.PopAsync(); //If they somehow manage to get to the scan item page without choosing a store, this should send them back to select a store.
             }
-
-            barcodeReader.BarcodesDetected += OnBarcodeDetected;
-            barcodeReader.IsDetecting = true;
         }
 
         private async void OnBarcodeDetected(object sender, BarcodeDetectionEventArgs e)
@@ -43,21 +41,53 @@ namespace SelfCheckoutApp.Pages
                 return;
 
             _isProcessingBarcode = true;
+
+            // Disable scanning immediately to prevent repeated events.
+            barcodeReader.IsDetecting = false;
+
             var barcodeResult = e.Results.FirstOrDefault();
             if (barcodeResult != null && !string.IsNullOrEmpty(barcodeResult.Value))
             {
-                await ProcessBarcode(barcodeResult.Value);
-            }
-            _isProcessingBarcode = false;
-        }
 
-        private async void OnSearchClicked(object sender, EventArgs e)
-        {
-            string barcode = BarcodeEntry.Text;
-            if (!string.IsNullOrWhiteSpace(barcode) && barcode.Length == 13)
-            {
-                await ProcessBarcode(barcode);
+                var allowedFormats = new List<ZXing.Net.Maui.BarcodeFormat>
+                {
+                    ZXing.Net.Maui.BarcodeFormat.Ean13,
+                    ZXing.Net.Maui.BarcodeFormat.Ean8,
+                    ZXing.Net.Maui.BarcodeFormat.UpcA,
+                    ZXing.Net.Maui.BarcodeFormat.UpcE,
+                    ZXing.Net.Maui.BarcodeFormat.Code128
+                };
+
+                if (!allowedFormats.Contains(barcodeResult.Format))
+                {
+                    // Use the main thread for UI updates.
+                    await MainThread.InvokeOnMainThreadAsync(async () =>
+                    {
+                        await DisplayAlert("Invalid Barcode", "This barcode format is not supported. Please scan a valid product barcode.", "OK");
+                        _isProcessingBarcode = false;
+                        return;
+                    });
+                }
+                else
+                {
+                    // Use the main thread for UI updates.
+                    await MainThread.InvokeOnMainThreadAsync(async () =>
+                    {
+                        await ProcessBarcode(barcodeResult.Value);
+                    });
+                }
             }
+
+            // Wait for a short period to avoid re-triggering immediately.
+            await Task.Delay(500);
+
+            // Re-enable detection if the page is still visible.
+            if (this.IsVisible)
+            {
+                barcodeReader.IsDetecting = true;
+            }
+
+            _isProcessingBarcode = false;
         }
 
         private async Task ProcessBarcode(string barcode)
@@ -95,6 +125,7 @@ namespace SelfCheckoutApp.Pages
             }
         }
     }
+
 
     public class Product
     {

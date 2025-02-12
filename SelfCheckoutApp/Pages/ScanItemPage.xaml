@@ -6,31 +6,35 @@
     x:Class="SelfCheckoutApp.Pages.ScanItemPage"
     Title="Scan Item">
 
-    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="FillAndExpand">
+    <VerticalStackLayout Padding="20" Spacing="10">
+
         <!-- Display the selected store name -->
         <Label x:Name="StoreLabel" 
-               Text="Shopping at ..." 
-               FontSize="20" 
-               FontAttributes="Bold" 
-               HorizontalOptions="Center" />
+               Text="Shopping at SuperMart" 
+               FontSize="28" 
+               HorizontalOptions="Center"
+               Margin="0,10,0,5" />
 
         <!-- Instruction -->
         <Label Text="Scan a Product Barcode" 
-               FontSize="24" 
-               HorizontalOptions="Center" />
+               FontSize="18" 
+               HorizontalOptions="Center"
+               Margin="0,0,0,5"
+               TextColor="Grey"/>
 
         <!-- Barcode Scanner View -->
-        <zxing:CameraBarcodeReaderView x:Name="barcodeReader"
-                                       IsDetecting="False"
-                                       VerticalOptions="FillAndExpand" />
-
-        <!-- Fallback: Manual Barcode Entry -->
-        <Entry x:Name="BarcodeEntry" 
-               Placeholder="Enter barcode manually" />
-
-        <Button Text="Search" 
-                Clicked="OnSearchClicked" 
-                HorizontalOptions="Fill" />
+        <Border BackgroundColor="Grey" Padding="2">
+            <zxing:CameraBarcodeReaderView x:Name="barcodeReader"
+                                           BarcodesDetected="OnBarcodeDetected"
+                                           IsDetecting="True"
+                                           VerticalOptions="CenterAndExpand" />
+        </Border>
+        
+        <Label Text="Please hold the phone in LANDSCAPE mode"
+               FontSize="14"
+               HorizontalOptions="Center"
+               TextColor="#2b0098"/>
+        
 
         <!-- Error Message Display -->
         <Label x:Name="ErrorMessage" 
@@ -38,4 +42,5 @@
                IsVisible="False" 
                HorizontalOptions="Center" />
     </VerticalStackLayout>
+
 </ContentPage>

@@ -20,15 +20,7 @@ namespace SelfCheckoutApp
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkitCore()
-                .UseBarcodeReader() 
-                .ConfigureMauiHandlers(handlers =>
-                {
-                    handlers.AddHandler(typeof(CameraBarcodeReaderView), typeof(CameraBarcodeReaderViewHandler));
-                })
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                .UseBarcodeReader();
 
 
             builder.Services.AddSingleton<UserSession>();

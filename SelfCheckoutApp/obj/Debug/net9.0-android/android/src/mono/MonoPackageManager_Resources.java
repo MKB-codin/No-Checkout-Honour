@@ -111,7 +111,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Google.Guava.ListenableFuture.dll",
 		"Xamarin.Jetbrains.Annotations.dll",
 		"Xamarin.Kotlin.StdLib.dll",
-		"Xamarin.Kotlin.StdLib.Common.dll",
 		"Xamarin.KotlinX.AtomicFU.dll",
 		"Xamarin.KotlinX.AtomicFU.Jvm.dll",
 		"Xamarin.KotlinX.Coroutines.Android.dll",

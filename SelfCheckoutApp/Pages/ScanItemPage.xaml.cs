@@ -92,46 +92,79 @@ namespace SelfCheckoutApp.Pages
 
         private async Task ProcessBarcode(string barcode)
         {
+            // Add a delay to throttle requests
+            await Task.Delay(500);
+
             try
             {
-                // Call the API endpoint to retrieve product details by barcode.
-                var product = await _httpClient.GetFromJsonAsync<Product>($"/api/Products/{barcode}");
+                int storeId = _userSession.StoreId;
+                var response = await _httpClient.GetAsync($"/api/Products/GetProductByBarcode/{barcode}?storeId={storeId}");
+
+                if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    await ShowErrorMessage("Product not found for the selected store. \n Please scan products from this store");
+                    return;
+                }
+
+                response.EnsureSuccessStatusCode();
+                var product = await response.Content.ReadFromJsonAsync<ProductResponse>();
                 if (product != null)
                 {
                     bool addToCart = await DisplayAlert("Add to Cart",
                         $"Product: {product.ProductName}\nPrice: £{product.Price:F2}\n\nAdd to basket?", "Yes", "No");
                     if (addToCart)
                     {
-                        // Create a new CartItem and add it to the session's cart.
-                        var newItem = new Services.UserSession.CartItem { ItemName = product.ProductName, ItemPrice = product.Price, ItemQuantity = 1 };
-                        _userSession.CartItems.Add(newItem);
+                        var existingItem = _userSession.CartItems.FirstOrDefault(i => i.ItemName == product.ProductName);
+                        if (existingItem != null)
+                        {
+                            // Increase the quantity of the existing item
+                            existingItem.ItemQuantity++;
+                        }
+                        else
+                        {
+                            // Create a new CartItem and add it to the session's cart
+                            var newItem = new Services.UserSession.CartItem
+                            {
+                                ItemName = product.ProductName,
+                                ItemPrice = (double)product.Price,
+                                ItemQuantity = 1
+                            };
+                            _userSession.CartItems.Add(newItem);
+                        }
 
                         await DisplayAlert("Success", $"{product.ProductName} added to cart!", "OK");
-
-                        // Navigate back to the Basket page.
                         await Navigation.PopAsync();
                     }
                 }
                 else
                 {
-                    ErrorMessage.Text = "Product not found.";
-                    ErrorMessage.IsVisible = true;
+                    await ShowErrorMessage("Product not found.");
                 }
             }
             catch (Exception ex)
             {
-                ErrorMessage.Text = $"Error: {ex.Message}";
-                ErrorMessage.IsVisible = true;
+                await ShowErrorMessage($"Error: {ex.Message}");
             }
         }
+
+        private async Task ShowErrorMessage(string message)
+        {
+            ErrorMessage.Text = message;
+            ErrorMessage.IsVisible = true;
+            await Task.Delay(3000); // wait 3 seconds
+            ErrorMessage.IsVisible = false;
+        }
+
+
     }
 
 
-    public class Product
+    public class ProductResponse
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string BarcodeId { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
+        public int StoreId { get; set; }
     }
 }

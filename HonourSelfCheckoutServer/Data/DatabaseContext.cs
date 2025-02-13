@@ -12,26 +12,29 @@ namespace HonourSelfCheckoutServer.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<StoreProduct> StoreProducts { get; set; }
         public DbSet<Receipt> Receipts { get; set; }
         public DbSet<ReceiptItem> ReceiptItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            
             modelBuilder.Entity<ReceiptItem>()
                 .HasKey(ri => ri.ItemId);
 
-            modelBuilder.Entity<ReceiptItem>()
-                .HasOne<Receipt>()  
-                .WithMany()         
-                .HasForeignKey(ri => ri.ReceiptId);
+            modelBuilder.Entity<StoreProduct>()
+                .HasKey(sp => new { sp.StoreId, sp.ProductId });
 
-            modelBuilder.Entity<ReceiptItem>()
-                .HasOne<Product>()  
-                .WithMany()         
-                .HasForeignKey(ri => ri.ProductId);
+            modelBuilder.Entity<StoreProduct>()
+                .HasOne(sp => sp.Store)
+                .WithMany(s => s.StoreProducts)
+                .HasForeignKey(sp => sp.StoreId);
+
+            modelBuilder.Entity<StoreProduct>()
+                .HasOne(sp => sp.Product)
+                .WithMany(p => p.StoreProducts)
+                .HasForeignKey(sp => sp.ProductId);
         }
+
     }
 }

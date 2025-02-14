@@ -72,6 +72,20 @@ namespace SelfCheckoutApp.Pages
         {
             if (sender is Button btn && btn.CommandParameter is Store selectedStore)
             {
+
+                if (_userSession.StoreId != selectedStore.StoreId && _userSession.CartItems.Any())
+                {
+                    bool clearCart = await DisplayAlert("Clear Cart",
+                        "Changing stores will clear your cart. Continue?", "Yes", "No");
+                    if (clearCart)
+                    {
+                        _userSession.CartItems.Clear();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
                 bool confirm = await DisplayAlert("Confirm Store",
                     $"You selected {selectedStore.StoreName}. Is this correct?", "Yes", "No");
 

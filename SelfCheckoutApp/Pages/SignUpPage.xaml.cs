@@ -19,17 +19,27 @@ namespace SelfCheckoutApp.Pages
             };
         }
 
+        // Navigate to Terms of Service page when tapped
+        private async void OnTermsTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TermsOfServicePage());
+        }
+
+        // Navigate to Privacy Policy page when tapped
+        private async void OnPrivacyTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PrivacyPolicyPage());
+        }
+
         private async void OnSignUpClicked(object sender, EventArgs e)
         {
             ErrorMessage.IsVisible = false;
-
 
             string name = NameEntry.Text;
             string email = EmailEntry.Text;
             string phone = PhoneEntry.Text;
             string password = PasswordEntry.Text;
             string confirmPassword = ConfirmPasswordEntry.Text;
-
             // Validate inputs
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email) ||
                 string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(password))

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelfCheckoutApp.Pages.TermsOfServicePage"
+             Title="Terms of Service">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- Title -->
+        <Label Text="Terms of Service"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <!-- Scrollable Terms Section -->
+        <ScrollView HeightRequest="550">
+            <VerticalStackLayout Padding="10" Spacing="10">
+
+                <Label Text="Effective Date: February 14, 2025"
+                       FontSize="12"
+                       TextColor="Gray"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="1. Introduction"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="By signing up for an account and using this service, you agree to abide by these Terms of Service. If you do not agree, please do not proceed."
+                       FontSize="14"/>
+
+                <Label Text="2. User Accounts"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="You must provide accurate information during account registration. You are responsible for maintaining the confidentiality of your account credentials."
+                       FontSize="14"/>
+
+                <Label Text="3. Use of Services"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="This app provides a self-checkout system for grocery stores. Unauthorized use, hacking, or data scraping is strictly prohibited."
+                       FontSize="14"/>
+
+                <Label Text="4. Data Collection &amp; Privacy"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="We collect and store account details like Name, Email, Phone along with transaction history and purchase details to enhance your experience and provide support. We do not sell or share your data with third parties."
+                       FontSize="14"/>
+
+                <Label Text="5. Payment &amp; Refunds"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="All payments are securely processed via Stripe. Refunds are subject to the store’s refund policy. We do not directly process refunds."
+                       FontSize="14"/>
+
+                <Label Text="6. Termination of Account"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="We reserve the right to suspend or terminate accounts found in violation of these Terms of Service."
+                       FontSize="14"/>
+
+                <Label Text="7. Contact Us"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="For any inquiries, contact support at: support@selfcheckoutapp.com"
+                       FontSize="14"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </VerticalStackLayout>
+
+</ContentPage>

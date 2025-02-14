@@ -38,5 +38,13 @@ namespace SelfCheckoutApp.Pages
             // Navigate to the Receipts page (to be implemented)
             await Navigation.PushAsync(new ReceiptsPage(_userSession)); 
         }
+        private async void OnPrivacyClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PrivacyPolicyPage());
+        }
+        private async void OnTermsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TermsOfServicePage());
+        }
     }
 }

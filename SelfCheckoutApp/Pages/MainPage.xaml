@@ -10,17 +10,41 @@
 
     <VerticalStackLayout Padding="20" Spacing="30" VerticalOptions="StartAndExpand">
 
+        <!-- Welcome Label -->
         <Label x:Name="WelcomeLabel" FontSize="24" HorizontalTextAlignment="Center" />
-        
 
+        <!-- Start Shopping Button -->
         <Button Text="Start Shopping"
                 Clicked="OnStartShoppingClicked"
                 HorizontalOptions="FillAndExpand"
                 FontSize="18" />
 
+        <!-- Receipts Button -->
         <Button Text="Receipts"
                 Clicked="OnReceiptsClicked"
                 HorizontalOptions="FillAndExpand"
                 FontSize="18" />
+
+        <!-- Terms of Service & Privacy Policy Buttons in a Horizontal Layout -->
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+            <Button Text="Terms of Service"
+                    Clicked="OnTermsClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Padding="5"
+                    BorderColor="Transparent"
+                    BorderWidth="0" />
+            <Label Text="-" FontSize="16" TextColor="Gray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Button Text="Privacy Policy"
+                    Clicked="OnPrivacyClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Padding="5"
+                    BorderColor="Transparent"
+                    BorderWidth="0" />
+        </HorizontalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

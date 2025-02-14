@@ -12,30 +12,19 @@
                    HorizontalOptions="Center" />
 
             <!-- Name Entry -->
-            <Entry x:Name="NameEntry" 
-                   Placeholder="Name" 
-                   Keyboard="Text" />
+            <Entry x:Name="NameEntry" Placeholder="Name" Keyboard="Text" />
 
             <!-- Email Entry -->
-            <Entry x:Name="EmailEntry" 
-                   Placeholder="Email" 
-                   Keyboard="Email" />
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
 
             <!-- Phone Entry -->
-            <Entry x:Name="PhoneEntry" 
-                   Placeholder="Phone Number" 
-                   Keyboard="Numeric" 
-                   MaxLength="10" />
+            <Entry x:Name="PhoneEntry" Placeholder="Phone Number" Keyboard="Numeric" MaxLength="10" />
 
             <!-- Password Entry -->
-            <Entry x:Name="PasswordEntry" 
-                   Placeholder="Password" 
-                   IsPassword="True" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
 
             <!-- Confirm Password Entry -->
-            <Entry x:Name="ConfirmPasswordEntry" 
-                   Placeholder="Confirm Password" 
-                   IsPassword="True" />
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" />
 
             <!-- Error Message -->
             <Label x:Name="ErrorMessage" 
@@ -44,9 +33,26 @@
                    HorizontalOptions="Center" />
 
             <!-- Sign Up Button -->
-            <Button Text="Sign Up" 
-                    Clicked="OnSignUpClicked" 
-                    HorizontalOptions="Fill" />
+            <Button Text="Sign Up" Clicked="OnSignUpClicked" HorizontalOptions="Fill" />
+
+            <!-- Terms of Service Agreement -->
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                <Label Text="By proceeding, you agree to the" FontSize="14" HorizontalOptions="Center" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Terms of Service" 
+                           FontSize="14"
+                           TextColor="Blue"
+                           FontAttributes="Bold"
+                           GestureRecognizers="{TapGestureRecognizer Tapped='OnTermsTapped'}"/>
+                    <Label Text=" and " FontSize="14"/>
+                    <Label Text="Privacy Policy"
+                           FontSize="14"
+                           TextColor="Blue"
+                           FontAttributes="Bold"
+                           GestureRecognizers="{TapGestureRecognizer Tapped='OnPrivacyTapped'}"/>
+                </StackLayout>
+            </StackLayout>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

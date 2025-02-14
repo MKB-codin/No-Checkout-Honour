@@ -54,6 +54,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.Paym
 build_metadata.AdditionalFiles.TargetPath = Pages\PaymentPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\PaymentPage.xaml
 
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/PrivacyPolicyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.PrivacyPolicyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PrivacyPolicyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PrivacyPolicyPage.xaml
+
 [C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/ReceiptDetailsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.ReceiptDetailsPage.xaml
@@ -83,6 +89,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.StoreSelectionPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\StoreSelectionPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\StoreSelectionPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/TermsOfServicePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.TermsOfServicePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\TermsOfServicePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\TermsOfServicePage.xaml
 
 [C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

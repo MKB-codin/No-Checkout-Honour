@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelfCheckoutApp.Pages.PrivacyPolicyPage"
+             Title="Privacy Policy">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- Title -->
+        <Label Text="Privacy Policy"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <!-- Scrollable Privacy Policy Section -->
+        <ScrollView HeightRequest="500">
+            <VerticalStackLayout Padding="10" Spacing="10">
+
+                <Label Text="Effective Date: February 14, 2025"
+                       FontSize="12"
+                       TextColor="Gray"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="1. Introduction"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="This Privacy Policy explains how SelfCheckoutApp collects, uses, and protects your personal data when using our services."
+                       FontSize="14"/>
+
+                <Label Text="2. Information We Collect"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="We collect personal details (name, email, phone), transaction data, location (if granted), and device information."
+                       FontSize="14"/>
+
+                <Label Text="3. How We Use Your Information"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="We use your data for processing transactions, store recommendations, improving user experience, and legal compliance."
+                       FontSize="14"/>
+
+                <Label Text="4. How We Store and Protect Your Data"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="Your data is encrypted and securely stored. Payment details are handled by Stripe and not stored by us."
+                       FontSize="14"/>
+
+                <Label Text="5. Sharing of Data"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="We do not sell your data. We may share transaction details with stores and payment providers as necessary."
+                       FontSize="14"/>
+
+                <Label Text="6. User Control &amp; Data Deletion"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="You can update or delete your account at any time by contacting support@selfcheckoutapp.com."
+                       FontSize="14"/>
+
+                <Label Text="7. Cookies &amp; Tracking"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="Our app may use tracking for analytics, but users can opt out if preferred."
+                       FontSize="14"/>
+
+                <!-- Clickable Third-Party Services -->
+                <Label Text="8. Third-Party Services"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="Payments are processed through Stripe. Read their Privacy Policy: https://stripe.com/privacy"
+                       FontSize="14"
+                       TextDecorations="Underline"
+                       TextColor="Blue">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStripeLinkTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Text="9. Changes to This Privacy Policy"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="We may update this policy and will notify users of major changes."
+                       FontSize="14"/>
+
+                <Label Text="10. Contact Information"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="For questions, contact: support@selfcheckoutapp.com"
+                       FontSize="14"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </VerticalStackLayout>
+</ContentPage>

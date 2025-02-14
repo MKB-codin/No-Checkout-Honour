@@ -20,6 +20,9 @@
     <MauiXaml Update="Pages\PaymentPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Pages\PrivacyPolicyPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Pages\ReceiptDetailsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -33,6 +36,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Pages\StoreSelectionPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\TermsOfServicePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

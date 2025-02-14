@@ -60,33 +60,35 @@ namespace SelfCheckoutApp.Pages
             base.OnAppearing();
             LoadReceipts();
         }
-
-        private async void ReceiptsCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void OnReceiptTapped(object sender, EventArgs e)
         {
-            if (e.CurrentSelection.FirstOrDefault() is ReceiptResponse selectedReceipt)
+            if (sender is VisualElement element && element.BindingContext is ReceiptResponse selectedReceipt)
             {
                 await Navigation.PushAsync(new ReceiptDetailsPage(selectedReceipt));
             }
         }
+
     }
 
     public class ReceiptResponse
     {
         public int ReceiptId { get; set; }
         public int StoreId { get; set; }
-        public string StoreName { get; set; } // NEW PROPERTY
+        public string StoreName { get; set; } // Ensure this is included
         public int UserId { get; set; }
         public double Total { get; set; }
         public DateTime PurchaseDate { get; set; }
         public List<ReceiptItemResponse> ReceiptItems { get; set; }
     }
 
-
     public class ReceiptItemResponse
     {
         public int ItemId { get; set; }
         public int ReceiptId { get; set; }
         public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public double Price { get; set; }
         public int Quantity { get; set; }
+        public double ItemTotal { get; set; }
     }
 }

@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="SelfCheckoutApp.Pages.ReceiptDetailsPage"
     Title="Receipt Details">
+
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="10">
-            <Label Text="{Binding ReceiptId, StringFormat='Receipt ID: {0}'}" FontSize="20" />
-            <Label Text="{Binding PurchaseDate, StringFormat='Purchased on: {0:dd MMM yyyy HH:mm}'}" />
-            <Label Text="{Binding Total, StringFormat='Total: £{0:F2}'}" />
-            <CollectionView ItemsSource="{Binding ReceiptItems}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <HorizontalStackLayout>
-                            <Label Text="{Binding ProductId}" />
-                            <Label Text="{Binding Quantity, StringFormat='Qty: {0}'}" />
-                        </HorizontalStackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <!-- Store Name -->
+            <Label Text="{Binding StoreName}" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <!-- Purchase Date -->
+            <Label Text="{Binding PurchaseDate, StringFormat='Purchased on: {0:dd MMM yyyy HH:mm}'}"
+                   FontSize="18" 
+                   HorizontalOptions="Center" />
+
+            <!-- Receipt Items Section -->
+            <Frame BorderColor="Black" Padding="10" Margin="10,20" BackgroundColor="WhiteSmoke">
+                <VerticalStackLayout Spacing="10">
+                    <!-- Header Row with Proper Spacing -->
+                    <Grid Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <!-- Item Name -->
+                            <ColumnDefinition Width="1.5*"/>
+                            <!-- Quantity -->
+                            <ColumnDefinition Width="2*"/>
+                            <!-- Price -->
+                            <ColumnDefinition Width="2*"/>
+                            <!-- Total -->
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Item" FontAttributes="Bold" Grid.Column="0" />
+                        <Label Text="Qty" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="Center" />
+                        <Label Text="Price" FontAttributes="Bold" Grid.Column="2" HorizontalOptions="Center" />
+                        <Label Text="Subtotal" FontAttributes="Bold" Grid.Column="3" HorizontalOptions="End" />
+                    </Grid>
+
+                    <!-- Items List with Spacing Adjustments -->
+                    <CollectionView ItemsSource="{Binding ReceiptItems}" SelectionMode="None">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="1.5*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding ProductName}" Grid.Column="0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Quantity}" Grid.Column="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Price, StringFormat='£{0:F2}'}" Grid.Column="2" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding ItemTotal, StringFormat='£{0:F2}'}" Grid.Column="3" HorizontalOptions="End" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Total Price -->
+            <Label Text="{Binding Total, StringFormat='Total: £{0:F2}'}"
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

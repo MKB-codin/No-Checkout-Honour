@@ -5,13 +5,16 @@
     x:Class="SelfCheckoutApp.Pages.ReceiptsPage"
     Title="Past Receipts">
     <VerticalStackLayout Padding="20" Spacing="10">
-        <CollectionView x:Name="ReceiptsCollectionView" 
-                ItemsSource="{Binding Receipts}"
-                SelectionMode="Single" 
-                SelectionChanged="ReceiptsCollectionView_SelectionChanged">
+        <CollectionView x:Name="ReceiptsCollectionView"
+                        ItemsSource="{Binding Receipts}"
+                        SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="10" Margin="5" BackgroundColor="LightGray" HasShadow="True">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnReceiptTapped"
+                                                  CommandParameter="{Binding .}" />
+                        </Frame.GestureRecognizers>
                         <StackLayout>
                             <Label Text="{Binding StoreName}" FontSize="20" FontAttributes="Bold" />
                             <Label Text="{Binding PurchaseDate, StringFormat='Purchased on: {0:dd MMM yyyy HH:mm}'}" FontSize="14" />
@@ -21,6 +24,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
     </VerticalStackLayout>
 </ContentPage>

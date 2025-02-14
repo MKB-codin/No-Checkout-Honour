@@ -31,7 +31,7 @@ namespace HonourSelfCheckoutServer.Controllers
                     StoreName = _databaseContext.Stores
                         .Where(s => s.StoreId == r.StoreId)
                         .Select(s => s.StoreName)
-                        .FirstOrDefault(), // Get the store name
+                        .FirstOrDefault(),
                     r.UserId,
                     r.Total,
                     r.PurchaseDate,
@@ -40,6 +40,15 @@ namespace HonourSelfCheckoutServer.Controllers
                         ri.ItemId,
                         ri.ReceiptId,
                         ri.ProductId,
+                        ProductName = _databaseContext.Products
+                            .Where(p => p.ProductId == ri.ProductId)
+                            .Select(p => p.ProductName)
+                            .FirstOrDefault(),
+
+                        Price = _databaseContext.StoreProducts
+                            .Where(sp => sp.StoreId == r.StoreId && sp.ProductId == ri.ProductId)
+                            .Select(sp => sp.Price)
+                            .FirstOrDefault(),
                         ri.Quantity
                     }).ToList()
                 })
@@ -48,15 +57,51 @@ namespace HonourSelfCheckoutServer.Controllers
             return Ok(receipts);
         }
 
-        // GET: api/Receipts/5
+
         [HttpGet("{receiptId}")]
         public async Task<IActionResult> GetReceiptDetails(int receiptId)
         {
             var receipt = await _databaseContext.Receipts
-                .Include(r => r.ReceiptItems)
-                .FirstOrDefaultAsync(r => r.ReceiptId == receiptId);
+                .Where(r => r.ReceiptId == receiptId)
+                .Select(r => new
+                {
+                    r.ReceiptId,
+                    r.StoreId,
+                    StoreName = _databaseContext.Stores
+                        .Where(s => s.StoreId == r.StoreId)
+                        .Select(s => s.StoreName)
+                        .FirstOrDefault(),
+                    r.UserId,
+                    r.Total,
+                    r.PurchaseDate,
+                    ReceiptItems = r.ReceiptItems.Select(ri => new
+                    {
+                        ri.ItemId,
+                        ri.ReceiptId,
+                        ri.ProductId,
+                        ProductName = _databaseContext.Products
+                            .Where(p => p.ProductId == ri.ProductId)
+                            .Select(p => p.ProductName)
+                            .FirstOrDefault(),
+                        Price = _databaseContext.StoreProducts
+                            .Where(sp => sp.StoreId == r.StoreId && sp.ProductId == ri.ProductId)
+                            .Select(sp => sp.Price)
+                            .FirstOrDefault(),
+                        ri.Quantity,
+
+                        ItemTotal = (_databaseContext.StoreProducts
+                            .Where(sp => sp.StoreId == r.StoreId && sp.ProductId == ri.ProductId)
+                            .Select(sp => sp.Price)
+                            .FirstOrDefault()) * ri.Quantity
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
+
             if (receipt == null)
+            {
                 return NotFound(new { Message = "Receipt not found." });
+            }
+
             return Ok(receipt);
         }
     }

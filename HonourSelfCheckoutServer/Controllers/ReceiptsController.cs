@@ -12,7 +12,7 @@ namespace HonourSelfCheckoutServer.Controllers
     [ApiController]
     public class ReceiptsController : ControllerBase
     {
-        private DatabaseContext _databaseContext;
+        private readonly DatabaseContext _databaseContext;
 
         public ReceiptsController(DatabaseContext databaseContext)
         {
@@ -20,32 +20,45 @@ namespace HonourSelfCheckoutServer.Controllers
         }
 
         [HttpGet("User/{userId}")]
-        public async Task<IActionResult> GetReceiptByUser(int userId)
+        public async Task<IActionResult> GetUserReceipts(int userId)
         {
             var receipts = await _databaseContext.Receipts
                 .Where(r => r.UserId == userId)
+                .Select(r => new
+                {
+                    r.ReceiptId,
+                    r.StoreId,
+                    StoreName = _databaseContext.Stores
+                        .Where(s => s.StoreId == r.StoreId)
+                        .Select(s => s.StoreName)
+                        .FirstOrDefault(), // Get the store name
+                    r.UserId,
+                    r.Total,
+                    r.PurchaseDate,
+                    ReceiptItems = r.ReceiptItems.Select(ri => new
+                    {
+                        ri.ItemId,
+                        ri.ReceiptId,
+                        ri.ProductId,
+                        ri.Quantity
+                    }).ToList()
+                })
                 .ToListAsync();
-
-            if (!receipts.Any())
-            {
-                return NotFound(new { Message = "No receipts found for this user" });
-            }
 
             return Ok(receipts);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateReceipt([FromBody] Receipt receipt)
+        // GET: api/Receipts/5
+        [HttpGet("{receiptId}")]
+        public async Task<IActionResult> GetReceiptDetails(int receiptId)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            _databaseContext.Receipts.Add(receipt);
-            await _databaseContext.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetReceiptByUser), new { userId = receipt.UserId }, receipt);
+            var receipt = await _databaseContext.Receipts
+                .Include(r => r.ReceiptItems)
+                .FirstOrDefaultAsync(r => r.ReceiptId == receiptId);
+            if (receipt == null)
+                return NotFound(new { Message = "Receipt not found." });
+            return Ok(receipt);
         }
     }
 }
+

@@ -36,7 +36,7 @@ namespace SelfCheckoutApp.Pages
         private async void OnReceiptsClicked(object sender, EventArgs e)
         {
             // Navigate to the Receipts page (to be implemented)
-            //await Navigation.PushAsync(new ReceiptsPage()); 
+            await Navigation.PushAsync(new ReceiptsPage(_userSession)); 
         }
     }
 }

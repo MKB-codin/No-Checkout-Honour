@@ -7,5 +7,7 @@
         public int UserId { get; set; }
         public decimal Total { get; set; }
         public DateTime PurchaseDate { get; set; }
+
+        public List<ReceiptItem> ReceiptItems { get; set; }
     }
 }

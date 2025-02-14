@@ -54,6 +54,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.Paym
 build_metadata.AdditionalFiles.TargetPath = Pages\PaymentPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\PaymentPage.xaml
 
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/ReceiptDetailsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.ReceiptDetailsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ReceiptDetailsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ReceiptDetailsPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/ReceiptsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.ReceiptsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ReceiptsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ReceiptsPage.xaml
+
 [C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/ScanItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.ScanItemPage.xaml

@@ -175,30 +175,22 @@
         }
       }
     },
-    "/api/Receipts": {
-      "post": {
+    "/api/Receipts/{receiptId}": {
+      "get": {
         "tags": [
           "Receipts"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Receipt"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Receipt"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Receipt"
-              }
+        "parameters": [
+          {
+            "name": "receiptId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -445,32 +437,6 @@
           "password": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Receipt": {
-        "type": "object",
-        "properties": {
-          "receiptId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "storeId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "total": {
-            "type": "number",
-            "format": "double"
-          },
-          "purchaseDate": {
-            "type": "string",
-            "format": "date-time"
           }
         },
         "additionalProperties": false

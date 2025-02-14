@@ -123,6 +123,7 @@ namespace SelfCheckoutApp.Pages
                         { 
                             var newItem = new Services.UserSession.CartItem
                             {
+                                ProductId = product.ProductId,
                                 ItemName = product.ProductName,
                                 ItemPrice = (double)product.Price,
                                 ItemQuantity = 1

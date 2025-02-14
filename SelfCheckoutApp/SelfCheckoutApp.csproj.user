@@ -20,6 +20,12 @@
     <MauiXaml Update="Pages\PaymentPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Pages\ReceiptDetailsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\ReceiptsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Pages\ScanItemPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

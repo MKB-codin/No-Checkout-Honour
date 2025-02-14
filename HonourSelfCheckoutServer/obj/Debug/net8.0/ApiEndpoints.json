@@ -90,15 +90,15 @@
   },
   {
     "ContainingType": "HonourSelfCheckoutServer.Controllers.ReceiptsController",
-    "Method": "CreateReceipt",
-    "RelativePath": "api/Receipts",
-    "HttpMethod": "POST",
+    "Method": "GetReceiptDetails",
+    "RelativePath": "api/Receipts/{receiptId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "receipt",
-        "Type": "HonourSelfCheckoutServer.Models.Receipt",
+        "Name": "receiptId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -106,7 +106,7 @@
   },
   {
     "ContainingType": "HonourSelfCheckoutServer.Controllers.ReceiptsController",
-    "Method": "GetReceiptByUser",
+    "Method": "GetUserReceipts",
     "RelativePath": "api/Receipts/User/{userId}",
     "HttpMethod": "GET",
     "IsController": true,

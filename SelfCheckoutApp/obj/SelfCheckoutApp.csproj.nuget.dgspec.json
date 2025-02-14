@@ -89,10 +89,6 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "Stripe.net": {
-              "target": "Package",
-              "version": "[47.3.0, )"
-            },
             "System.Device.Location.Portable": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -159,10 +155,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Stripe.net": {
-              "target": "Package",
-              "version": "[47.3.0, )"
             },
             "System.Device.Location.Portable": {
               "target": "Package",
@@ -231,10 +223,6 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "Stripe.net": {
-              "target": "Package",
-              "version": "[47.3.0, )"
-            },
             "System.Device.Location.Portable": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -296,10 +284,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Stripe.net": {
-              "target": "Package",
-              "version": "[47.3.0, )"
             },
             "System.Device.Location.Portable": {
               "target": "Package",

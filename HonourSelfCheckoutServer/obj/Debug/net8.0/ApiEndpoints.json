@@ -1,18 +1,70 @@
 [
   {
-    "ContainingType": "HonourSelfCheckoutServer.Controllers.ProductsController",
-    "Method": "GetProductByBarcode",
-    "RelativePath": "api/Products/{barcode}",
-    "HttpMethod": "GET",
+    "ContainingType": "HonourSelfCheckoutServer.Controllers.PaymentController",
+    "Method": "CreateCheckoutSession",
+    "RelativePath": "api/Payment/CreateCheckoutSession",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "barcode",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "HonourSelfCheckoutServer.Controllers.CheckoutSessionRequest",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HonourSelfCheckoutServer.Controllers.PaymentController",
+    "Method": "CreatePaymentIntent",
+    "RelativePath": "api/Payment/CreatePaymentIntent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "HonourSelfCheckoutServer.Controllers.CheckoutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HonourSelfCheckoutServer.Controllers.PaymentController",
+    "Method": "FinalizeCheckout",
+    "RelativePath": "api/Payment/FinalizeCheckout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "HonourSelfCheckoutServer.Controllers.CheckoutFinalizationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HonourSelfCheckoutServer.Controllers.PaymentController",
+    "Method": "PaymentCancel",
+    "RelativePath": "api/Payment/payment-cancel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HonourSelfCheckoutServer.Controllers.PaymentController",
+    "Method": "PaymentSuccess",
+    "RelativePath": "api/Payment/payment-success",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

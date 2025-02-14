@@ -117,12 +117,10 @@ namespace SelfCheckoutApp.Pages
                         var existingItem = _userSession.CartItems.FirstOrDefault(i => i.ItemName == product.ProductName);
                         if (existingItem != null)
                         {
-                            // Increase the quantity of the existing item
                             existingItem.ItemQuantity++;
                         }
                         else
-                        {
-                            // Create a new CartItem and add it to the session's cart
+                        { 
                             var newItem = new Services.UserSession.CartItem
                             {
                                 ItemName = product.ProductName,
@@ -138,12 +136,12 @@ namespace SelfCheckoutApp.Pages
                 }
                 else
                 {
-                    await ShowErrorMessage("Product not found.");
+                    await ShowErrorMessage("Product not found."); //this shouldnt even be possible, but just in case
                 }
             }
             catch (Exception ex)
             {
-                await ShowErrorMessage($"Error: {ex.Message}");
+                await ShowErrorMessage($"Error: {ex.Message}"); // for any other errors
             }
         }
 
@@ -151,7 +149,7 @@ namespace SelfCheckoutApp.Pages
         {
             ErrorMessage.Text = message;
             ErrorMessage.IsVisible = true;
-            await Task.Delay(3000); // wait 3 seconds
+            await Task.Delay(3500); //the error message will disappear after 3.5 seconds
             ErrorMessage.IsVisible = false;
         }
 

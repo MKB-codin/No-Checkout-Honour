@@ -1,9 +1,13 @@
 using HonourSelfCheckoutServer.Data;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+Console.WriteLine($"Stripe key Length: {StripeConfiguration.ApiKey.Length}");
 // Register the database context
 builder.Services.AddDbContext<DatabaseContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

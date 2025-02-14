@@ -1,25 +1,38 @@
 using SelfCheckoutApp.Services;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http.Json;
 
 namespace SelfCheckoutApp.Pages
 {
     public partial class BasketPage : ContentPage
     {
         private readonly UserSession _userSession;
-        public ObservableCollection<Services.UserSession.CartItem> CartItems => _userSession.CartItems;
+        private readonly HttpClient _httpClient;
+
+        // Bind directly to the UserSession's CartItems (ObservableCollection)
+        public ObservableCollection<UserSession.CartItem> CartItems => _userSession.CartItems;
 
         public BasketPage(UserSession userSession)
         {
             InitializeComponent();
             _userSession = userSession;
             BindingContext = this;
+
+            // Initialize HttpClient with your server's base URL
+            _httpClient = new HttpClient(new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
+            })
+            {
+                BaseAddress = new Uri("https://192.168.0.41:7249")
+            };
             UpdateTotalPrice();
         }
 
         private void OnIncreaseQuantity(object sender, EventArgs e)
         {
-            if (sender is Button button && button.BindingContext is Services.UserSession.CartItem item)
+            if (sender is Button button && button.BindingContext is UserSession.CartItem item)
             {
                 item.ItemQuantity++;
                 UpdateTotalPrice();
@@ -28,7 +41,7 @@ namespace SelfCheckoutApp.Pages
 
         private async void OnDecreaseQuantity(object sender, EventArgs e)
         {
-            if (sender is Button button && button.BindingContext is Services.UserSession.CartItem item)
+            if (sender is Button button && button.BindingContext is UserSession.CartItem item)
             {
                 if (item.ItemQuantity > 1)
                 {
@@ -36,13 +49,11 @@ namespace SelfCheckoutApp.Pages
                 }
                 else
                 {
-                    // Prompt the user to confirm removal when quantity is 1.
                     bool confirm = await DisplayAlert("Confirm Removal",
-                        $"Do you really want to remove  {item.ItemName}  from your basket?", "Yes", "No");
+                        $"Do you really want to remove {item.ItemName} from your basket?", "Yes", "No");
                     if (confirm)
                     {
                         CartItems.Remove(item);
-                        _userSession.CartItems.Remove(item); // Update the session cart as well.
                     }
                 }
                 UpdateTotalPrice();
@@ -57,7 +68,7 @@ namespace SelfCheckoutApp.Pages
 
         private async void OnAddItemClicked(object sender, EventArgs e)
         {
-            // Navigate to the Scan Item page, passing the UserSession
+            // Navigate to the Scan Item page, passing the UserSession.
             await Navigation.PushAsync(new ScanItemPage(_userSession));
         }
 
@@ -69,22 +80,58 @@ namespace SelfCheckoutApp.Pages
                 return;
             }
 
-            bool confirm = await DisplayAlert("Checkout", "Proceed to checkout?", "Yes", "No");
-            if (confirm)
-            {
-                // Send the cart to the server (to be implemented)
-                await DisplayAlert("Success", "Checkout complete!", "OK");
+            double total = CartItems.Sum(item => item.ItemPrice * item.ItemQuantity);
 
-                _userSession.CartItems.Clear();
-                UpdateTotalPrice();
+            // Build your checkout session request
+            var checkoutRequest = new
+            {
+                UserId = _userSession.UserId,
+                StoreId = _userSession.StoreId,
+                Total = total,
+                SuccessUrl = "https://192.168.0.41:7249/api/Payments/payment-success",
+                CancelUrl = "https://192.168.0.41:7249/api/Payments/payment-cancel"
+
+            };
+
+            var createResponse = await _httpClient.PostAsJsonAsync("/api/Payment/CreateCheckoutSession", checkoutRequest);
+            if (!createResponse.IsSuccessStatusCode)
+            {
+                await DisplayAlert("Error", "Failed to create checkout session.", "OK");
+                return;
             }
+
+            var result = await createResponse.Content.ReadFromJsonAsync<CreateCheckoutSessionResponse>();
+            if (result == null || string.IsNullOrEmpty(result.Url))
+            {
+                await DisplayAlert("Error", "Failed to get payment URL.", "OK");
+                return;
+            }
+
+            // Navigate to the PaymentPage with the checkout URL
+            await Navigation.PushAsync(new PaymentPage(result.Url, _userSession, total));
         }
+
+        public class CreateCheckoutSessionResponse
+        {
+            public string Url { get; set; }
+        }
+
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             UpdateTotalPrice();
         }
+    }
 
+    // Response model for PaymentIntent creation
+    public class CreatePaymentIntentResponse
+    {
+        public string ClientSecret { get; set; }
+    }
+
+    public class CreateCheckoutSessionResponse
+    {
+        public string Url { get; set; }
     }
 }

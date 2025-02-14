@@ -30,9 +30,23 @@ namespace SelfCheckoutApp.Services
 
         public class CartItem : INotifyPropertyChanged
         {
+            private int productId;
             private string itemName;
             private double itemPrice;
             private int itemQuantity = 1;
+
+            public int ProductId
+            {
+                get => productId;
+                set
+                {
+                    if (productId != value)
+                    {
+                        productId = value;
+                        OnPropertyChanged();
+                    }
+                }
+            }
 
             public string ItemName
             {
@@ -74,7 +88,6 @@ namespace SelfCheckoutApp.Services
             }
 
             public event PropertyChangedEventHandler PropertyChanged;
-
             protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

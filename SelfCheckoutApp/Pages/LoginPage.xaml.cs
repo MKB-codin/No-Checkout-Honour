@@ -110,7 +110,6 @@ namespace SelfCheckoutApp.Pages
 
                             await DisplayAlert("Success", "Login successful!", "OK");
 
-                            // Navigate to the main page.
                             await Navigation.PushAsync(new MainPage(_userSession));
                         }
                     }

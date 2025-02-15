@@ -19,7 +19,7 @@ namespace HonourSelfCheckoutServer.Controllers
             _configuration = configuration;
         }
 
-        // POST: api/Payment/CreatePaymentIntent
+
         [HttpPost("CreatePaymentIntent")]
         public async Task<IActionResult> CreatePaymentIntent([FromBody] CheckoutRequest request)
         {
@@ -38,8 +38,7 @@ namespace HonourSelfCheckoutServer.Controllers
             var service = new PaymentIntentService();
             PaymentIntent intent = await service.CreateAsync(options);
 
-            // In test mode, we can simulate a payment confirmation automatically.
-            // The test payment method "pm_card_visa" simulates a successful card payment.
+
             var confirmOptions = new PaymentIntentConfirmOptions
             {
                 PaymentMethod = "pm_card_visa"
@@ -49,14 +48,11 @@ namespace HonourSelfCheckoutServer.Controllers
             return Ok(new { ClientSecret = confirmedIntent.ClientSecret });
         }
 
-        // POST: api/Payment/FinalizeCheckout
+
         [HttpPost("FinalizeCheckout")]
         public async Task<IActionResult> FinalizeCheckout([FromBody] CheckoutFinalizationRequest request)
         {
-            // Here, you would normally verify the payment status (if needed) and then create a Receipt record.
-            // For simplicity, assume payment is successful.
 
-            // Create Receipt
             Receipt receipt = new Receipt
             {
                 StoreId = request.StoreId,
@@ -67,7 +63,7 @@ namespace HonourSelfCheckoutServer.Controllers
             _databaseContext.Receipts.Add(receipt);
             await _databaseContext.SaveChangesAsync();
 
-            // Create ReceiptItems for each cart item
+ 
             foreach (var item in request.CartItems)
             {
                 ReceiptItem receiptItem = new ReceiptItem
@@ -85,12 +81,11 @@ namespace HonourSelfCheckoutServer.Controllers
         [HttpPost("CreateCheckoutSession")]
         public async Task<IActionResult> CreateCheckoutSession([FromBody] CheckoutSessionRequest request)
         {
-            // Create options for a Stripe Checkout Session.
+
             var options = new SessionCreateOptions
             {
                 PaymentMethodTypes = new List<string> { "card" },
                 Mode = "payment",
-                // The amount should be in the smallest currency unit (e.g., pence for GBP).
                 LineItems = new List<SessionLineItemOptions>
                 {
                     new SessionLineItemOptions
@@ -101,7 +96,7 @@ namespace HonourSelfCheckoutServer.Controllers
                             UnitAmount = (long)(request.Total * 100),
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
-                                Name = "Total Order" // You can customize this as needed.
+                                Name = "Total Order" 
                             }
                         },
                         Quantity = 1
@@ -154,7 +149,7 @@ namespace HonourSelfCheckoutServer.Controllers
         public int UserId { get; set; }
         public int StoreId { get; set; }
         public double Total { get; set; }
-        // The URLs your app should navigate to on success or cancel. 
+
         public string SuccessUrl { get; set; }
         public string CancelUrl { get; set; }
     }

@@ -23,7 +23,6 @@ namespace SelfCheckoutApp.Pages
                 BaseAddress = new Uri("https://192.168.0.41:7249")
             };
 
-            // Load full receipt details and update the BindingContext.
             LoadReceiptDetails();
         }
 
@@ -34,7 +33,7 @@ namespace SelfCheckoutApp.Pages
                 var receiptDetails = await _httpClient.GetFromJsonAsync<ReceiptResponse>($"/api/Receipts/{_initialReceipt.ReceiptId}");
                 if (receiptDetails != null)
                 {
-                    // Set the BindingContext to the fully loaded receipt details.
+
                     BindingContext = receiptDetails;
                 }
                 else

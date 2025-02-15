@@ -10,14 +10,14 @@ namespace SelfCheckoutApp.Pages
         private readonly HttpClient _httpClient;
         private readonly UserSession _userSession;
 
-        // Observable collection for binding
+
         public ObservableCollection<ReceiptResponse> Receipts { get; set; } = new ObservableCollection<ReceiptResponse>();
 
         public ReceiptsPage(UserSession userSession)
         {
             InitializeComponent();
             _userSession = userSession;
-            BindingContext = this; // Ensure the BindingContext is set
+            BindingContext = this; 
 
             _httpClient = new HttpClient(new HttpClientHandler
             {
@@ -74,7 +74,7 @@ namespace SelfCheckoutApp.Pages
     {
         public int ReceiptId { get; set; }
         public int StoreId { get; set; }
-        public string StoreName { get; set; } // Ensure this is included
+        public string StoreName { get; set; }
         public int UserId { get; set; }
         public double Total { get; set; }
         public DateTime PurchaseDate { get; set; }

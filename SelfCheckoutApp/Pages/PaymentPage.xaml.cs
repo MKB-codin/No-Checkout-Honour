@@ -18,7 +18,6 @@ namespace SelfCheckoutApp.Pages
             _userSession = userSession;
             _total = total;
 
-            // HttpClient to call FinalizeCheckout if payment is successful
             _httpClient = new HttpClient(new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
@@ -32,7 +31,6 @@ namespace SelfCheckoutApp.Pages
 
         private async void PaymentWebView_Navigated(object sender, WebNavigatedEventArgs e)
         {
-            // If the URL is your success URL, finalize checkout
             if (e.Url.Contains("payment-success"))
             {
                 await FinalizeCheckout();

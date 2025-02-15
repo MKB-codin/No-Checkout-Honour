@@ -10,7 +10,6 @@ namespace SelfCheckoutApp.Pages
         private readonly UserSession _userSession;
         private readonly HttpClient _httpClient;
 
-        // Bind directly to the UserSession's CartItems (ObservableCollection)
         public ObservableCollection<UserSession.CartItem> CartItems => _userSession.CartItems;
 
         public BasketPage(UserSession userSession)
@@ -19,7 +18,6 @@ namespace SelfCheckoutApp.Pages
             _userSession = userSession;
             BindingContext = this;
 
-            // Initialize HttpClient with your server's base URL
             _httpClient = new HttpClient(new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
@@ -68,7 +66,6 @@ namespace SelfCheckoutApp.Pages
 
         private async void OnAddItemClicked(object sender, EventArgs e)
         {
-            // Navigate to the Scan Item page, passing the UserSession.
             await Navigation.PushAsync(new ScanItemPage(_userSession));
         }
 

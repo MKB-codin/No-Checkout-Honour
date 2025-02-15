@@ -11,14 +11,12 @@ namespace SelfCheckoutApp.Services
         private Timer _timer;
         public bool IsServerOnline { get; private set; } = true;
 
-        // Event raised when server is detected as offline.
         public event EventHandler ServerOffline;
 
         public ServerStatusService(string baseUrl)
         {
             _httpClient = new HttpClient(new HttpClientHandler
             {
-                // For development: bypass certificate validation
                 ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
             })
             {
@@ -27,18 +25,14 @@ namespace SelfCheckoutApp.Services
             };
         }
 
-        /// <summary>
-        /// Starts periodic server status checks.
-        /// </summary>
+
         public void StartChecking()
         {
             // Check every 10 seconds.
             _timer = new Timer(async _ => await CheckServerStatusAsync(), null, 0, 10000);
         }
 
-        /// <summary>
-        /// Stops the periodic server status checks.
-        /// </summary>
+
         public void StopChecking()
         {
             _timer?.Change(Timeout.Infinite, Timeout.Infinite);
@@ -53,13 +47,11 @@ namespace SelfCheckoutApp.Services
                 bool online = response.IsSuccessStatusCode;
                 if (!online && IsServerOnline)
                 {
-                    // Transition from online to offline
                     IsServerOnline = false;
                     OnServerOffline();
                 }
                 else if (online)
                 {
-                    // Server is online, update flag.
                     IsServerOnline = true;
                 }
             }

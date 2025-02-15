@@ -83,8 +83,6 @@ namespace SelfCheckoutApp.Pages
                 ErrorMessage.IsVisible = true;
                 return;
             }
-
-            // sign-up request payload
             var signUpRequest = new
             {
                 name = name,
@@ -95,13 +93,12 @@ namespace SelfCheckoutApp.Pages
 
             try
             {
-                // Send sign-up request to the server
                 var response = await _httpClient.PostAsJsonAsync("/api/Users/Register", signUpRequest);
 
                 if (response.IsSuccessStatusCode)
                 {
                     await DisplayAlert("Success", "Account created successfully!", "OK");
-                    await Navigation.PopAsync(); // Navigate back to the Login Page
+                    await Navigation.PopAsync(); 
                 }
                 else
                 {

@@ -25,7 +25,6 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
             });
 
-        // Register dependencies
         builder.Services.AddSingleton<UserSession>();
         builder.Services.AddSingleton(new ServerStatusService("https://192.168.0.41:7249"));
 

@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/health": {
+      "get": {
+        "tags": [
+          "HonourSelfCheckoutServer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Payment/CreatePaymentIntent": {
       "post": {
         "tags": [

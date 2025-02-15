@@ -4,6 +4,16 @@
         <name>SelfCheckoutApp</name>
     </assembly>
     <members>
+        <member name="M:SelfCheckoutApp.Services.ServerStatusService.StartChecking">
+            <summary>
+            Starts periodic server status checks.
+            </summary>
+        </member>
+        <member name="M:SelfCheckoutApp.Services.ServerStatusService.StopChecking">
+            <summary>
+            Stops the periodic server status checks.
+            </summary>
+        </member>
         <member name="T:SelfCheckoutApp.Resource">
             <summary>
             Android Resource Designer class.

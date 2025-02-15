@@ -4,6 +4,7 @@ using SelfCheckoutApp.Services;
 using System.Linq;
 using System.Threading.Tasks;
 using ZXing;
+using Microsoft.Maui.Devices;
 
 namespace SelfCheckoutApp.Pages
 {
@@ -60,17 +61,16 @@ namespace SelfCheckoutApp.Pages
 
                 if (!allowedFormats.Contains(barcodeResult.Format))
                 {
-                    // Use the main thread for UI updates.
-                    await MainThread.InvokeOnMainThreadAsync(async () =>
+                    await MainThread.InvokeOnMainThreadAsync(async () => //Using Main threads cuz it crashes if I don't
                     {
                         await DisplayAlert("Invalid Barcode", "This barcode format is not supported. Please scan a valid product barcode.", "OK");
+                        Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(250));
                         _isProcessingBarcode = false;
                         return;
                     });
                 }
                 else
                 {
-                    // Use the main thread for UI updates.
                     await MainThread.InvokeOnMainThreadAsync(async () =>
                     {
                         await ProcessBarcode(barcodeResult.Value);
@@ -92,7 +92,6 @@ namespace SelfCheckoutApp.Pages
 
         private async Task ProcessBarcode(string barcode)
         {
-            // Add a delay to throttle requests
             await Task.Delay(500);
 
             try
@@ -102,6 +101,7 @@ namespace SelfCheckoutApp.Pages
 
                 if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
+                    Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(250));
                     await ShowErrorMessage("Product not found for the selected store. \n Please scan products from this store");
                     return;
                 }
@@ -110,6 +110,7 @@ namespace SelfCheckoutApp.Pages
                 var product = await response.Content.ReadFromJsonAsync<ProductResponse>();
                 if (product != null)
                 {
+                    Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(150));
                     bool addToCart = await DisplayAlert("Add to Cart",
                         $"Product: {product.ProductName}\nPrice: £{product.Price:F2}\n\nAdd to basket?", "Yes", "No");
                     if (addToCart)

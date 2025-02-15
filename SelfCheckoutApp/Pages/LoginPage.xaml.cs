@@ -1,6 +1,8 @@
 using SelfCheckoutApp.Services;
 using System.Net.Http.Json;
 using System.Text.RegularExpressions;
+using Microsoft.Maui.Dispatching;
+using System.Threading.Tasks;
 
 namespace SelfCheckoutApp.Pages
 {
@@ -8,89 +10,164 @@ namespace SelfCheckoutApp.Pages
     {
         private readonly HttpClient _httpClient;
         private readonly UserSession _userSession;
+        private bool _serverOnline = true; // assume online initially
+        private bool _isLoginInProgress = false;   // throttle flag for login
+        private bool _isSignUpInProgress = false;    // throttle flag for sign-up
 
         public LoginPage(UserSession userSession)
         {
             InitializeComponent();
-
-
+            _userSession = userSession;
             _httpClient = new HttpClient(new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
             })
             {
-                BaseAddress = new Uri("https://192.168.0.41:7249")
+                BaseAddress = new Uri("https://192.168.0.41:7249"),
+                Timeout = TimeSpan.FromSeconds(2)
             };
+        }
 
-            _userSession = userSession;
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            _serverOnline = await IsServerOnline();
+            UpdateUIBasedOnServerStatus(_serverOnline);
+        }
+
+        private async Task<bool> IsServerOnline()
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync("/api/health");
+                Console.WriteLine($"Health check returned: {response.StatusCode}");
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Health check exception: {ex.Message}");
+                return false;
+            }
+        }
+
+        private void UpdateUIBasedOnServerStatus(bool online)
+        {
+            // Show the server status message if the server is offline.
+            ServerStatusMessage.IsVisible = !online;
         }
 
         private async void OnLoginClicked(object sender, EventArgs e)
         {
-            ErrorMessage.IsVisible = false;
-            string email = EmailEntry.Text;
-            string password = PasswordEntry.Text;
-
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
-            {
-                ErrorMessage.Text = "Email and Password are required.";
-                ErrorMessage.IsVisible = true;
+            // Throttle login requests: if one is already in progress, do nothing.
+            if (_isLoginInProgress)
                 return;
-            }
 
-            if (!IsValidEmail(email))
-            {
-                ErrorMessage.Text = "Please enter a valid email address.";
-                ErrorMessage.IsVisible = true;
-                return;
-            }
-
-            var loginRequest = new { email, password };
-
+            _isLoginInProgress = true;
             try
             {
-                var response = await _httpClient.PostAsJsonAsync("/api/Users/Login", loginRequest);
+                // Re-check server status before attempting login.
+                _serverOnline = await IsServerOnline();
+                UpdateUIBasedOnServerStatus(_serverOnline);
 
-                if (response.IsSuccessStatusCode)
+                if (!_serverOnline)
                 {
-                    var responseData = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                    await DisplayAlert("Server Offline", "The server is currently unreachable. Please try again later.", "OK");
+                    return;
+                }
 
-                    if (responseData != null)
+                ErrorMessage.IsVisible = false;
+                string email = EmailEntry.Text;
+                string password = PasswordEntry.Text;
+
+                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                {
+                    ErrorMessage.Text = "Email and Password are required.";
+                    ErrorMessage.IsVisible = true;
+                    return;
+                }
+
+                if (!IsValidEmail(email))
+                {
+                    ErrorMessage.Text = "Please enter a valid email address.";
+                    ErrorMessage.IsVisible = true;
+                    return;
+                }
+
+                var loginRequest = new { email, password };
+
+                try
+                {
+                    var response = await _httpClient.PostAsJsonAsync("/api/Users/Login", loginRequest);
+
+                    if (response.IsSuccessStatusCode)
                     {
-                        /*Preferences.Set("UserId", responseData.UserId);
-                        Preferences.Set("UserName", responseData.Name);*/
+                        var responseData = await response.Content.ReadFromJsonAsync<LoginResponse>();
 
-                        _userSession.UserId = responseData.UserId;
-                        _userSession.UserName = responseData.Name;
+                        if (responseData != null)
+                        {
+                            _userSession.UserId = responseData.UserId;
+                            _userSession.UserName = responseData.Name;
 
-                        await DisplayAlert("Success", "Login successful!", "OK");
+                            await DisplayAlert("Success", "Login successful!", "OK");
 
-                        // Navigate to the next page
-                        await Navigation.PushAsync(new MainPage(_userSession));
+                            // Navigate to the main page.
+                            await Navigation.PushAsync(new MainPage(_userSession));
+                        }
+                    }
+                    else
+                    {
+                        ErrorMessage.Text = "Invalid email or password.";
+                        ErrorMessage.IsVisible = true;
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    ErrorMessage.Text = "Invalid email or password.";
+                    ErrorMessage.Text = $"Error: {ex.Message}";
                     ErrorMessage.IsVisible = true;
                 }
             }
-            catch (Exception ex)
+            finally
             {
-                ErrorMessage.Text = $"Error: {ex.Message}";
-                ErrorMessage.IsVisible = true;
+                // Throttle: wait 2 seconds before allowing another login attempt.
+                await Task.Delay(2000);
+                _isLoginInProgress = false;
             }
         }
 
         private async void OnSignUpClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SignUpPage());
+            // Throttle sign-up requests.
+            if (_isSignUpInProgress)
+                return;
+
+            _isSignUpInProgress = true;
+            try
+            {
+                // Check if the server is online before proceeding.
+                bool serverUp = await IsServerOnline();
+                UpdateUIBasedOnServerStatus(serverUp);
+
+                if (!serverUp)
+                {
+                    await DisplayAlert("Server Offline", "The server is currently unreachable. Please try again later.", "OK");
+                    return;
+                }
+
+                // If server is online, navigate to the Sign Up page.
+                await Navigation.PushAsync(new SignUpPage());
+            }
+            finally
+            {
+                // Wait 2 seconds to throttle subsequent sign-up clicks.
+                await Task.Delay(2000);
+                _isSignUpInProgress = false;
+            }
         }
 
         private bool IsValidEmail(string email)
         {
-            string emialPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            return Regex.IsMatch(email, emialPattern);
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
         }
 
         public class LoginResponse
@@ -100,5 +177,4 @@ namespace SelfCheckoutApp.Pages
             public string Name { get; set; }
         }
     }
-
 }

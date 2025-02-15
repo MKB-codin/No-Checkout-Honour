@@ -9,27 +9,26 @@ using Microsoft.Maui;
 using SelfCheckoutApp.Services;
 
 
-namespace SelfCheckoutApp
+using SelfCheckoutApp.Services;
+using SelfCheckoutApp;
+
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .UseBarcodeReader()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-            builder
-                .UseMauiApp<App>()
-                .UseMauiCommunityToolkitCore()
-                .UseBarcodeReader();
+        // Register dependencies
+        builder.Services.AddSingleton<UserSession>();
+        builder.Services.AddSingleton(new ServerStatusService("https://192.168.0.41:7249"));
 
-
-            builder.Services.AddSingleton<UserSession>();
-
-#if DEBUG
-            builder.Logging.AddDebug();
-#endif
-
-            return builder.Build();
-        }
+        return builder.Build();
     }
 }

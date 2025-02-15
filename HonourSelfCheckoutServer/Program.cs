@@ -28,19 +28,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
-        // Set the endpoint for Swagger JSON
+
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
 
-        // Set the route prefix (Swagger UI URL path)
         // Use string.Empty to make Swagger UI available at the root (e.g., http://localhost:5147/)
         options.RoutePrefix = string.Empty;
 
-        // Customize the Swagger UI title
         options.DocumentTitle = "SelfCheckout";
 
         options.EnableDeepLinking();
 
-        // Allow displaying operation IDs
+
         options.DisplayOperationId();
     });
 

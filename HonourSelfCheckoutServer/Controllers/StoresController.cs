@@ -18,7 +18,7 @@ namespace HonourSelfCheckoutServer.Controllers
     {
         private readonly DatabaseContext _databaseContext;
         private const string GoogleGeocodingApiKey = "AIzaSyBvR3a8ZinM40HwLm7hp2mEX2hPTGlDERQ";
-        // Base URL for Google Geocoding API
+
         private const string GeocodingApiUrl = "https://maps.googleapis.com/maps/api/geocode/json";
 
         public StoresController(DatabaseContext databaseContext)
@@ -40,7 +40,7 @@ namespace HonourSelfCheckoutServer.Controllers
             }
         }
 
-        // New endpoint: Returns the 3 nearest stores based on user's latitude and longitude.
+        // Returns the 3 nearest stores based on user's latitude and longitude.
         [HttpGet("GetNearestStores")]
         public async Task<IActionResult> GetNearestStores([FromQuery] double userLatitude, [FromQuery] double userLongitude)
         {
@@ -49,7 +49,6 @@ namespace HonourSelfCheckoutServer.Controllers
                 // Fetch all stores from the database (each store has StoreId, StoreName, and Location)
                 var stores = await _databaseContext.Stores.ToListAsync();
 
-                // Prepare an HttpClient for geocoding (ideally reuse one; here we create a new one)
                 using (var httpClient = new HttpClient())
                 {
                     List<StoreDTO> storeDTOs = new List<StoreDTO>();

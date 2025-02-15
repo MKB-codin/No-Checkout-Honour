@@ -24,6 +24,7 @@ namespace HonourSelfCheckoutServer.Controllers
         {
             var receipts = await _databaseContext.Receipts
                 .Where(r => r.UserId == userId)
+                .OrderByDescending(r => r.PurchaseDate)
                 .Select(r => new
                 {
                     r.ReceiptId,

@@ -1,3 +1,4 @@
+using SelfCheckoutApp.Constants;
 using SelfCheckoutApp.Services;
 using System.Collections.ObjectModel;
 using System.Net.Http.Json;
@@ -15,12 +16,9 @@ namespace SelfCheckoutApp.Pages
             _initialReceipt = receipt;
 
             // Initialize HttpClient with your server's base URL.
-            _httpClient = new HttpClient(new HttpClientHandler
+            _httpClient = new HttpClient(new HttpClientHandler())
             {
-                ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
-            })
-            {
-                BaseAddress = new Uri("https://192.168.0.41:7249")
+                BaseAddress = new Uri(ApiConstants.BaseUri)
             };
 
             LoadReceiptDetails();

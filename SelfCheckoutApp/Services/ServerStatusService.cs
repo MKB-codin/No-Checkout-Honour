@@ -15,10 +15,7 @@ namespace SelfCheckoutApp.Services
 
         public ServerStatusService(string baseUrl)
         {
-            _httpClient = new HttpClient(new HttpClientHandler
-            {
-                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
-            })
+            _httpClient = new HttpClient(new HttpClientHandler())
             {
                 BaseAddress = new Uri(baseUrl),
                 Timeout = TimeSpan.FromSeconds(5)

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ZXing;
 using Microsoft.Maui.Devices;
+using SelfCheckoutApp.Constants;
 
 namespace SelfCheckoutApp.Pages
 {
@@ -19,12 +20,9 @@ namespace SelfCheckoutApp.Pages
         {
             InitializeComponent();
             _userSession = userSession;
-            _httpClient = new HttpClient(new HttpClientHandler
+            _httpClient = new HttpClient(new HttpClientHandler())
             {
-                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
-            })
-            {
-                BaseAddress = new Uri("https://192.168.0.41:7249")
+                BaseAddress = new Uri(ApiConstants.BaseUri)
             };
 
             // If a store has been selected, display its name.

@@ -3,6 +3,7 @@ using System.Device.Location;
 using Microsoft.Maui.Devices.Sensors;
 using Newtonsoft.Json.Linq;
 using SelfCheckoutApp.Services;
+using SelfCheckoutApp.Constants;
 
 namespace SelfCheckoutApp.Pages
 {
@@ -13,12 +14,9 @@ namespace SelfCheckoutApp.Pages
         public StoreSelectionPage(UserSession userSession)
         {
             InitializeComponent();
-            _httpClient = new HttpClient(new HttpClientHandler
+            _httpClient = new HttpClient(new HttpClientHandler())
             {
-                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
-            })
-            {
-                BaseAddress = new Uri("https://192.168.0.41:7249")
+                BaseAddress = new Uri(ApiConstants.BaseUri)
             };
 
             _userSession = userSession;

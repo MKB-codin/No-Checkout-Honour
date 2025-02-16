@@ -1,3 +1,4 @@
+using SelfCheckoutApp.Constants;
 using System.Net.Http.Json;
 using System.Text.RegularExpressions;
 
@@ -10,12 +11,9 @@ namespace SelfCheckoutApp.Pages
         public SignUpPage()
         {
             InitializeComponent();
-            _httpClient = new HttpClient(new HttpClientHandler
+            _httpClient = new HttpClient(new HttpClientHandler())
             {
-                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
-            })
-            {
-                BaseAddress = new Uri("https://192.168.0.41:7249")
+                BaseAddress = new Uri(ApiConstants.BaseUri)
             };
         }
 

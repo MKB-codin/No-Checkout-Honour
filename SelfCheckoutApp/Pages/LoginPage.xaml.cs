@@ -3,6 +3,7 @@ using System.Net.Http.Json;
 using System.Text.RegularExpressions;
 using Microsoft.Maui.Dispatching;
 using System.Threading.Tasks;
+using SelfCheckoutApp.Constants;
 
 namespace SelfCheckoutApp.Pages
 {
@@ -18,12 +19,9 @@ namespace SelfCheckoutApp.Pages
         {
             InitializeComponent();
             _userSession = userSession;
-            _httpClient = new HttpClient(new HttpClientHandler
+            _httpClient = new HttpClient(new HttpClientHandler())
             {
-                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
-            })
-            {
-                BaseAddress = new Uri("https://192.168.0.41:7249"),
+                BaseAddress = new Uri(ApiConstants.BaseUri),
                 Timeout = TimeSpan.FromSeconds(2)
             };
         }

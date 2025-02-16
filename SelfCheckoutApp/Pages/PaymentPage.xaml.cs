@@ -1,4 +1,5 @@
 using Microsoft.Maui.Controls;
+using SelfCheckoutApp.Constants;
 using SelfCheckoutApp.Services;
 using System.Net.Http.Json;
 
@@ -18,12 +19,9 @@ namespace SelfCheckoutApp.Pages
             _userSession = userSession;
             _total = total;
 
-            _httpClient = new HttpClient(new HttpClientHandler
+            _httpClient = new HttpClient(new HttpClientHandler())
             {
-                ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true
-            })
-            {
-                BaseAddress = new Uri("https://192.168.0.41:7249") // or your server address
+                BaseAddress = new Uri(ApiConstants.BaseUri)
             };
 
             paymentWebView.Source = checkoutUrl;

@@ -9,8 +9,9 @@ using Microsoft.Maui;
 using SelfCheckoutApp.Services;
 
 
-using SelfCheckoutApp.Services;
+using SelfCheckoutApp.Constants;
 using SelfCheckoutApp;
+using System.Reflection.Metadata;
 
 public static class MauiProgram
 {
@@ -19,14 +20,10 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            .UseBarcodeReader()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+            .UseBarcodeReader();
 
         builder.Services.AddSingleton<UserSession>();
-        builder.Services.AddSingleton(new ServerStatusService("https://192.168.0.41:7249"));
+        builder.Services.AddSingleton(new ServerStatusService(ApiConstants.BaseUri));
 
         return builder.Build();
     }

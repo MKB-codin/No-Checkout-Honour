@@ -8,6 +8,6 @@ namespace SelfCheckoutApp.Constants
 {
     public static class ApiConstants
     {
-        public static string BaseUri { get; set; } = "https://5010-77-98-80-46.ngrok-free.app";
+        public static string BaseUri { get; set; } = "https://suitable-turkey-main.ngrok-free.app";
     }
 }

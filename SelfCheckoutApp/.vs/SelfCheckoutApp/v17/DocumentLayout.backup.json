@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\receiptspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\receiptspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\scanitempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\scanitempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\receiptdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\receiptdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\services\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:services\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\basketpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\basketpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\scanitempage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\paymentpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\paymentpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\receiptdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\receiptdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\receiptspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\receiptspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -75,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:constants\\apiconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\services\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:services\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\receiptspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\receiptspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -101,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,10 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\paymentpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\paymentpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\selfcheckoutapp\\pages\\basketpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A3F2699F-404E-4BAE-86E2-5CEB22B787B2}|SelfCheckoutApp.csproj|solutionrelative:pages\\basketpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -162,7 +162,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 313,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,79 +170,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SelfCheckoutApp",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
-              "RelativeDocumentMoniker": "SelfCheckoutApp.csproj",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
-              "RelativeToolTip": "SelfCheckoutApp.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-12T16:19:02.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SelfCheckoutApp.csproj",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
-              "RelativeDocumentMoniker": "SelfCheckoutApp.csproj",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
-              "RelativeToolTip": "SelfCheckoutApp.csproj",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-15T17:53:47.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReceiptDetailsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptDetailsPage.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\ReceiptDetailsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptDetailsPage.xaml.cs",
-              "RelativeToolTip": "Pages\\ReceiptDetailsPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T17:17:08.636Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReceiptsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptsPage.xaml",
-              "RelativeDocumentMoniker": "Pages\\ReceiptsPage.xaml",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptsPage.xaml",
-              "RelativeToolTip": "Pages\\ReceiptsPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-14T17:13:00.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ReceiptDetailsPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptDetailsPage.xaml",
               "RelativeDocumentMoniker": "Pages\\ReceiptDetailsPage.xaml",
               "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptDetailsPage.xaml",
               "RelativeToolTip": "Pages\\ReceiptDetailsPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABUAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-14T17:17:00.88Z"
+              "WhenOpened": "2025-02-14T17:17:00.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\MainPage.xaml",
               "RelativeDocumentMoniker": "Pages\\MainPage.xaml",
               "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\MainPage.xaml",
               "RelativeToolTip": "Pages\\MainPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-21T17:32:56.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "PrivacyPolicyPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\PrivacyPolicyPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\PrivacyPolicyPage.xaml.cs",
@@ -254,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Info.plist",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Platforms\\MacCatalyst\\Info.plist",
               "RelativeDocumentMoniker": "Platforms\\MacCatalyst\\Info.plist",
@@ -266,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -278,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "PaymentPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\PaymentPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\PaymentPage.xaml.cs",
@@ -290,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "FluentUI.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Resources\\Fonts\\FluentUI.cs",
               "RelativeDocumentMoniker": "Resources\\Fonts\\FluentUI.cs",
@@ -302,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ScanItemPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ScanItemPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\ScanItemPage.xaml.cs",
@@ -315,20 +269,107 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ScanItemPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ScanItemPage.xaml",
               "RelativeDocumentMoniker": "Pages\\ScanItemPage.xaml",
               "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ScanItemPage.xaml",
               "RelativeToolTip": "Pages\\ScanItemPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-11T18:25:00.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T15:29:00.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReceiptsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptsPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\ReceiptsPage.xaml",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptsPage.xaml",
+              "RelativeToolTip": "Pages\\ReceiptsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-14T17:13:00.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "ReceiptDetailsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptDetailsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\ReceiptDetailsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptDetailsPage.xaml.cs",
+              "RelativeToolTip": "Pages\\ReceiptDetailsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T17:17:08.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BasketPage.xaml",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\BasketPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\BasketPage.xaml",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\BasketPage.xaml",
+              "RelativeToolTip": "Pages\\BasketPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-09T17:36:36.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Services\\UserSession.cs",
+              "RelativeDocumentMoniker": "Services\\UserSession.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Services\\UserSession.cs",
+              "RelativeToolTip": "Services\\UserSession.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAnwFoAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T16:04:23.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SelfCheckoutApp.csproj",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
+              "RelativeDocumentMoniker": "SelfCheckoutApp.csproj",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
+              "RelativeToolTip": "SelfCheckoutApp.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-15T17:53:47.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SelfCheckoutApp",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
+              "RelativeDocumentMoniker": "SelfCheckoutApp.csproj",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\SelfCheckoutApp.csproj",
+              "RelativeToolTip": "SelfCheckoutApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-12T16:19:02.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "SignUpPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\SignUpPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\SignUpPage.xaml.cs",
@@ -340,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "StoreSelectionPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\StoreSelectionPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\StoreSelectionPage.xaml.cs",
@@ -352,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Entitlements.plist",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Platforms\\MacCatalyst\\Entitlements.plist",
               "RelativeDocumentMoniker": "Platforms\\MacCatalyst\\Entitlements.plist",
@@ -364,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -376,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "ServerStatusService.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Services\\ServerStatusService.cs",
               "RelativeDocumentMoniker": "Services\\ServerStatusService.cs",
@@ -388,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ApiConstants.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Constants\\ApiConstants.cs",
               "RelativeDocumentMoniker": "Constants\\ApiConstants.cs",
@@ -400,19 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserSession.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Services\\UserSession.cs",
-              "RelativeDocumentMoniker": "Services\\UserSession.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Services\\UserSession.cs",
-              "RelativeToolTip": "Services\\UserSession.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAxwEwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T16:04:23.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -424,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "BasketPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\BasketPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\BasketPage.xaml.cs",
@@ -436,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ReceiptsPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\ReceiptsPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\ReceiptsPage.xaml.cs",
@@ -448,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\LoginPage.xaml.cs",
@@ -460,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\MainPage.xaml.cs",
@@ -472,19 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:29:00.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "AppShell.xaml.cs",
@@ -496,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "TermsOfServicePage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\TermsOfServicePage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\TermsOfServicePage.xaml.cs",
@@ -508,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
@@ -520,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Styles.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Resources\\Styles\\Styles.xaml",
               "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
@@ -532,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\LoginPage.xaml",
               "RelativeDocumentMoniker": "Pages\\LoginPage.xaml",
@@ -544,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "AndroidManifest.xml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Platforms\\Android\\AndroidManifest.xml",
               "RelativeDocumentMoniker": "Platforms\\Android\\AndroidManifest.xml",
@@ -556,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "PrivacyPolicyPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\PrivacyPolicyPage.xaml",
               "RelativeDocumentMoniker": "Pages\\PrivacyPolicyPage.xaml",
@@ -568,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "TermsOfServicePage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\TermsOfServicePage.xaml",
               "RelativeDocumentMoniker": "Pages\\TermsOfServicePage.xaml",
@@ -580,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "SignUpPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\SignUpPage.xaml",
               "RelativeDocumentMoniker": "Pages\\SignUpPage.xaml",
@@ -592,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "StoreSelectionPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\StoreSelectionPage.xaml",
               "RelativeDocumentMoniker": "Pages\\StoreSelectionPage.xaml",
@@ -604,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "PaymentPage.xaml",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\PaymentPage.xaml",
               "RelativeDocumentMoniker": "Pages\\PaymentPage.xaml",
@@ -613,18 +630,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-14T16:08:34.357Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BasketPage.xaml",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\BasketPage.xaml",
-              "RelativeDocumentMoniker": "Pages\\BasketPage.xaml",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\SelfCheckoutApp\\Pages\\BasketPage.xaml",
-              "RelativeToolTip": "Pages\\BasketPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAACcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-09T17:36:36.78Z"
             }
           ]
         }

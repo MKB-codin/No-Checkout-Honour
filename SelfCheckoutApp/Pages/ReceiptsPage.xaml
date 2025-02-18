@@ -10,7 +10,7 @@
                         SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Border Padding="10" Margin="5" Shadow="True">
+                    <Border Padding="10" Margin="5" >
                         <Border.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnReceiptTapped"
                                                   CommandParameter="{Binding .}" />

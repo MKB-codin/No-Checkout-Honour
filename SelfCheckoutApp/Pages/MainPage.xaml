@@ -8,7 +8,7 @@
         <BackButtonBehavior IsEnabled="True" Command="{Binding LogoutCommand}" />
     </Shell.BackButtonBehavior>
 
-    <VerticalStackLayout Padding="20" Spacing="30" VerticalOptions="StartAndExpand">
+    <VerticalStackLayout Padding="20" Spacing="30" VerticalOptions="StartAndExpand" >
 
         <!-- Welcome Label -->
         <Label x:Name="WelcomeLabel" FontSize="24" HorizontalTextAlignment="Center" />
@@ -28,23 +28,24 @@
         <!-- Terms of Service & Privacy Policy Buttons in a Horizontal Layout -->
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
             <Button Text="Terms of Service"
-                    Clicked="OnTermsClicked"
-                    BackgroundColor="Transparent"
-                    TextColor="Black"
-                    FontAttributes="Bold"
-                    Padding="5"
-                    BorderColor="Transparent"
-                    BorderWidth="0" />
-            <Label Text="-" FontSize="16" TextColor="Gray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            Clicked="OnTermsClicked"
+            BackgroundColor="Transparent"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            FontAttributes="Bold"
+            Padding="5"
+            BorderColor="Transparent"
+            BorderWidth="0" />
+            <Label Text="-" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             <Button Text="Privacy Policy"
-                    Clicked="OnPrivacyClicked"
-                    BackgroundColor="Transparent"
-                    TextColor="Black"
-                    FontAttributes="Bold"
-                    Padding="5"
-                    BorderColor="Transparent"
-                    BorderWidth="0" />
+            Clicked="OnPrivacyClicked"
+            BackgroundColor="Transparent"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            FontAttributes="Bold"
+            Padding="5"
+            BorderColor="Transparent"
+            BorderWidth="0" />
         </HorizontalStackLayout>
+
 
     </VerticalStackLayout>
 </ContentPage>

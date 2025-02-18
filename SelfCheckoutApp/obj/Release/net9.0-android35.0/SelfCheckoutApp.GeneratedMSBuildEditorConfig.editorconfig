@@ -1,0 +1,109 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-android35.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SelfCheckoutApp
+build_property.ProjectDir = C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/BasketPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.BasketPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\BasketPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\BasketPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MainPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/PaymentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.PaymentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PaymentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PaymentPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/PrivacyPolicyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.PrivacyPolicyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PrivacyPolicyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PrivacyPolicyPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/ReceiptDetailsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.ReceiptDetailsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ReceiptDetailsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ReceiptDetailsPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/ReceiptsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.ReceiptsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ReceiptsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ReceiptsPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/ScanItemPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.ScanItemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ScanItemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ScanItemPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/SignUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.SignUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SignUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SignUpPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/StoreSelectionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.StoreSelectionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\StoreSelectionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\StoreSelectionPage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Pages/TermsOfServicePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Pages.TermsOfServicePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\TermsOfServicePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\TermsOfServicePage.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/mkbof/source/repos/MKB-codin/No-Checkout-Honour/SelfCheckoutApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SelfCheckoutApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

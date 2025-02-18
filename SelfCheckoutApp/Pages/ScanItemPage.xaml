@@ -31,9 +31,9 @@
         </Border>
         
         <Label Text="Please hold the phone in LANDSCAPE mode"
+               TextColor="{AppThemeBinding Light=Purple, Dark=Green}"
                FontSize="14"
-               HorizontalOptions="Center"
-               TextColor="#2b0098"/>
+               HorizontalOptions="Center"/>
         
 
         <!-- Error Message Display -->

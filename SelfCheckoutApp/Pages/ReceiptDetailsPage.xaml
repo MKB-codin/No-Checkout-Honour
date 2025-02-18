@@ -19,7 +19,7 @@
                    HorizontalOptions="Center" />
 
             <!-- Receipt Items Section -->
-            <Frame BorderColor="Black" Padding="10" Margin="10,20" BackgroundColor="WhiteSmoke">
+            <Frame BorderColor="Black" Padding="10" Margin="10,20">
                 <VerticalStackLayout Spacing="10">
                     <!-- Header Row with Proper Spacing -->
                     <Grid Padding="5">

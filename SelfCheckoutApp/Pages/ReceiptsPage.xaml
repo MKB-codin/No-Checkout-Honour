@@ -10,17 +10,17 @@
                         SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="10" Margin="5" BackgroundColor="LightGray" HasShadow="True">
-                        <Frame.GestureRecognizers>
+                    <Border Padding="10" Margin="5" Shadow="True">
+                        <Border.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnReceiptTapped"
                                                   CommandParameter="{Binding .}" />
-                        </Frame.GestureRecognizers>
+                        </Border.GestureRecognizers>
                         <StackLayout>
                             <Label Text="{Binding StoreName}" FontSize="20" FontAttributes="Bold" />
                             <Label Text="{Binding PurchaseDate, StringFormat='Purchased on: {0:dd MMM yyyy HH:mm}'}" FontSize="14" />
                             <Label Text="{Binding Total, StringFormat='Total: £{0:F2}'}" FontSize="14" />
                         </StackLayout>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

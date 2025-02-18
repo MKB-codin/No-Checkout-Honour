@@ -1,11 +1,6 @@
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\SelfCheckoutApp.runtimeconfig.json
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\SelfCheckoutApp.dll
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\SelfCheckoutApp.pdb
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\com.companyname.selfcheckoutapp.apk
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\com.companyname.selfcheckoutapp.aab
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\com.companyname.selfcheckoutapp-Signed.aab
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\com.companyname.selfcheckoutapp-Signed.apk
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\com.companyname.selfcheckoutapp-Signed.apk.idsig
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\build.props
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\adb.props
@@ -122,10 +117,7 @@ C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Rel
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\SelfCheckoutApp.pdb
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\SelfCheckoutApp.genruntimeconfig.cache
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\SelfCheckoutApp.runtimeconfig.json.bin
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\com.companyname.selfcheckoutapp.apk
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\base.zip
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\com.companyname.selfcheckoutapp.aab
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\com.companyname.selfcheckoutapp.apks
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\res\values\colors.xml
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\uploadflags.txt
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\resolvedassemblies.hash
@@ -428,7 +420,6 @@ C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Rel
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\assets\OpenSans-Regular.ttf
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\assets\OpenSans-Semibold.ttf
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\packaged_resources
-C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\src\com\companyname\selfcheckoutapp\R.java
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\_CompileJava.FileList.txt
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\compressed_assemblies.arm64-v8a.ll
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\compressed_assemblies.x86_64.ll
@@ -467,3 +458,12 @@ C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Rel
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\lp\163\jl\files.cache
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\lp\173\jl\files.cache
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\lp\174\jl\files.cache
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\MKB.MKB.apk
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\MKB.MKB.aab
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\MKB.MKB-Signed.aab
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\MKB.MKB-Signed.apk
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\bin\Release\net9.0-android\MKB.MKB-Signed.apk.idsig
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\MKB.MKB.apk
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\MKB.MKB.aab
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\bin\MKB.MKB.apks
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutApp\obj\Release\net9.0-android\android\src\mkb\mkb\R.java

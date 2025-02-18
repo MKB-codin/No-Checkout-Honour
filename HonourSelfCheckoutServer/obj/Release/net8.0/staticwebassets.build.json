@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "yPZ5bHRjecLO29mvvxxLuj0ZUWNN3xDAAL0j33qJfRc=",
+  "Source": "HonourSelfCheckoutServer",
+  "BasePath": "_content/HonourSelfCheckoutServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

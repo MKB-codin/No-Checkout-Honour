@@ -1,6 +1,5 @@
 obj\Release\net9.0-android\android-arm64\aot\_Microsoft.Android.Resource.Designer.dll.so
 obj\Release\net9.0-android\android-arm64\aot\SelfCheckoutApp.dll.so
-obj\Release\net9.0-android\android-arm64\aot\CommunityToolkit.Maui.Core.dll.so
 obj\Release\net9.0-android\android-arm64\aot\Microsoft.Extensions.Configuration.dll.so
 obj\Release\net9.0-android\android-arm64\aot\Microsoft.Extensions.Configuration.Abstractions.dll.so
 obj\Release\net9.0-android\android-arm64\aot\Microsoft.Extensions.DependencyInjection.dll.so

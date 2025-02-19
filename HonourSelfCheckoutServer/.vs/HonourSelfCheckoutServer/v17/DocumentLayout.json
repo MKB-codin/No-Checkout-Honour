@@ -3,44 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\honourselfcheckoutserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:honourselfcheckoutserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\checkoutsessionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\checkoutsessionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\checkoutfinalizationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\checkoutfinalizationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\cartitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\cartitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\checkoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\checkoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\receiptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\receiptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\helpers\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:helpers\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\helpers\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:helpers\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\storeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\storeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\honourselfcheckoutserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:honourselfcheckoutserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,32 +95,20 @@
       "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\receiptitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\models\\storeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:models\\storeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\honourselfcheckoutserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:honourselfcheckoutserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\receiptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\receiptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\honourselfcheckoutserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:honourselfcheckoutserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|c:\\users\\mkbof\\source\\repos\\mkb-codin\\no-checkout-honour\\honourselfcheckoutserver\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76D1DB71-003C-4807-B6AD-8976BEC0A4AE}|HonourSelfCheckoutServer.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,44 +126,241 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-16T16:11:44.043Z",
+              "DocumentIndex": 1,
+              "Title": "CheckoutSessionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CheckoutSessionRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CheckoutSessionRequest.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CheckoutSessionRequest.cs",
+              "RelativeToolTip": "Models\\CheckoutSessionRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T19:39:13.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Title": "CartItemRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CartItemRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CartItemRequest.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CartItemRequest.cs",
+              "RelativeToolTip": "Models\\CartItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T19:22:37.673Z"
+              "WhenOpened": "2025-02-19T19:38:39.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CheckoutFinalizationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CheckoutFinalizationRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CheckoutFinalizationRequest.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CheckoutFinalizationRequest.cs",
+              "RelativeToolTip": "Models\\CheckoutFinalizationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T19:38:15.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckoutRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CheckoutRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CheckoutRequest.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\CheckoutRequest.cs",
+              "RelativeToolTip": "Models\\CheckoutRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T19:37:41.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StoreDTO.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\StoreDTO.cs",
+              "RelativeDocumentMoniker": "Models\\StoreDTO.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\StoreDTO.cs",
+              "RelativeToolTip": "Models\\StoreDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T19:36:36.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HashHelper.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Helpers\\HashHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\HashHelper.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Helpers\\HashHelper.cs",
+              "RelativeToolTip": "Helpers\\HashHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T19:29:40.011Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowEEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T19:02:37.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T18:53:51.587Z"
+              "WhenOpened": "2025-02-15T18:53:51.587Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
+              "Title": "EncryptionHelper.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Helpers\\EncryptionHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\EncryptionHelper.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Helpers\\EncryptionHelper.cs",
+              "RelativeToolTip": "Helpers\\EncryptionHelper.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T17:31:16.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Models\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\LoginRequest.cs",
+              "RelativeToolTip": "Models\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T18:48:32.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StoresController.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\StoresController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StoresController.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\StoresController.cs",
+              "RelativeToolTip": "Controllers\\StoresController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwHgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T20:37:31.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwB8AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T20:35:26.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\PaymentController.cs*",
+              "RelativeToolTip": "Controllers\\PaymentController.cs*",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAtwHwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T23:37:32.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T15:01:11.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Store.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Store.cs",
+              "RelativeDocumentMoniker": "Models\\Store.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Store.cs",
+              "RelativeToolTip": "Models\\Store.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T17:02:49.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StoreProduct.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\StoreProduct.cs",
+              "RelativeDocumentMoniker": "Models\\StoreProduct.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\StoreProduct.cs",
+              "RelativeToolTip": "Models\\StoreProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T17:03:24.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Data\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "Data\\DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Data\\DatabaseContext.cs",
+              "RelativeToolTip": "Data\\DatabaseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T17:04:06.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReceiptsController.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ReceiptsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReceiptsController.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ReceiptsController.cs",
+              "RelativeToolTip": "Controllers\\ReceiptsController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAhwB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T20:35:25.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -147,91 +372,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T16:15:06.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "Models\\LoginRequest.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\LoginRequest.cs",
-              "RelativeToolTip": "Models\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T18:48:32.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAhwGIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T23:37:32.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwBQAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T20:35:26.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T16:26:20.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HonourSelfCheckoutServer.http",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\HonourSelfCheckoutServer.http",
-              "RelativeDocumentMoniker": "HonourSelfCheckoutServer.http",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\HonourSelfCheckoutServer.http",
-              "RelativeToolTip": "HonourSelfCheckoutServer.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-02-16T16:10:52.004Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "Receipt.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Receipt.cs",
               "RelativeDocumentMoniker": "Models\\Receipt.cs",
               "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Receipt.cs",
               "RelativeToolTip": "Models\\Receipt.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA7wAoAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwAoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-13T23:58:11.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "ReceiptItem.cs",
               "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\ReceiptItem.cs",
               "RelativeDocumentMoniker": "Models\\ReceiptItem.cs",
@@ -243,87 +396,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Store.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Store.cs",
-              "RelativeDocumentMoniker": "Models\\Store.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Store.cs",
-              "RelativeToolTip": "Models\\Store.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T17:02:49.894Z"
+              "DocumentIndex": 23,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-16T16:11:44.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "StoreProduct.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\StoreProduct.cs",
-              "RelativeDocumentMoniker": "Models\\StoreProduct.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\StoreProduct.cs",
-              "RelativeToolTip": "Models\\StoreProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T17:03:24.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DatabaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Data\\DatabaseContext.cs",
-              "RelativeDocumentMoniker": "Data\\DatabaseContext.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Data\\DatabaseContext.cs",
-              "RelativeToolTip": "Data\\DatabaseContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T17:04:06.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ReceiptsController.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ReceiptsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReceiptsController.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\ReceiptsController.cs",
-              "RelativeToolTip": "Controllers\\ReceiptsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAASwB0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T20:35:25.353Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T19:02:37.084Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "StoresController.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\StoresController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StoresController.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\StoresController.cs",
-              "RelativeToolTip": "Controllers\\StoresController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAApwEgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T20:37:31.4Z"
+              "WhenOpened": "2025-02-13T16:15:06.715Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T19:22:37.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HonourSelfCheckoutServer.http",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\HonourSelfCheckoutServer.http",
+              "RelativeDocumentMoniker": "HonourSelfCheckoutServer.http",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\HonourSelfCheckoutServer.http",
+              "RelativeToolTip": "HonourSelfCheckoutServer.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-02-16T16:10:52.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\mkbof\\source\\repos\\MKB-codin\\No-Checkout-Honour\\HonourSelfCheckoutServer\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T15:01:11.454Z"
+              "WhenOpened": "2025-02-09T16:26:20.99Z"
             },
             {
               "$type": "Document",

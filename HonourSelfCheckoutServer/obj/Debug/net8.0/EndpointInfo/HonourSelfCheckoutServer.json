@@ -475,6 +475,10 @@
           "email": {
             "type": "string",
             "nullable": true
+          },
+          "hashedEmail": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -86,7 +86,8 @@ namespace SelfCheckoutApp.Pages
                 name = name,
                 email = email,
                 phone = phone,
-                password = password
+                password = password,
+                HashedEmail = ""
             };
 
             try

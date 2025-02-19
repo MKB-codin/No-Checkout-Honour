@@ -30,8 +30,6 @@ if (app.Environment.IsDevelopment())
     {
 
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-
-        // Use string.Empty to make Swagger UI available at the root (e.g., http://localhost:5147/)
         options.RoutePrefix = string.Empty;
 
         options.DocumentTitle = "SelfCheckout";

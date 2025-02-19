@@ -63,7 +63,7 @@ namespace HonourSelfCheckoutServer.Controllers
             _databaseContext.Receipts.Add(receipt);
             await _databaseContext.SaveChangesAsync();
 
- 
+
             foreach (var item in request.CartItems)
             {
                 ReceiptItem receiptItem = new ReceiptItem
@@ -96,7 +96,7 @@ namespace HonourSelfCheckoutServer.Controllers
                             UnitAmount = (long)(request.Total * 100),
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
-                                Name = "Total Order" 
+                                Name = "Total Order"
                             }
                         },
                         Quantity = 1
@@ -122,35 +122,5 @@ namespace HonourSelfCheckoutServer.Controllers
             return Ok(new { Message = "Payment cancelled. No charges were made." });
         }
 
-    }
-
-    public class CheckoutRequest
-    {
-        public int UserId { get; set; }
-        public int StoreId { get; set; }
-        public double Total { get; set; }
-    }
-
-    public class CheckoutFinalizationRequest
-    {
-        public int UserId { get; set; }
-        public int StoreId { get; set; }
-        public double Total { get; set; }
-        public List<CartItemRequest> CartItems { get; set; }
-    }
-
-    public class CartItemRequest
-    {
-        public int ProductId { get; set; }
-        public int Quantity { get; set; }
-    }
-    public class CheckoutSessionRequest
-    {
-        public int UserId { get; set; }
-        public int StoreId { get; set; }
-        public double Total { get; set; }
-
-        public string SuccessUrl { get; set; }
-        public string CancelUrl { get; set; }
     }
 }

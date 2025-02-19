@@ -460,7 +460,15 @@
             "type": "integer",
             "format": "int32"
           },
-          "name": {
+          "encryptedName": {
+            "type": "string",
+            "nullable": true
+          },
+          "encryptedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "encryptedPhone": {
             "type": "string",
             "nullable": true
           },
@@ -468,11 +476,15 @@
             "type": "string",
             "nullable": true
           },
-          "phone": {
+          "name": {
             "type": "string",
             "nullable": true
           },
           "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
             "type": "string",
             "nullable": true
           }

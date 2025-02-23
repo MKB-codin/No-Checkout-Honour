@@ -26,7 +26,7 @@ namespace HonourSelfCheckoutServer.Controllers
         {
             string emailHash = HashHelper.Hash(user.Email.ToLower());
 
-            if (await _databaseContext.Users.AnyAsync(u => u.Email == EncryptionHelper.Encrypt(user.Email)))
+            if (await _databaseContext.Users.AnyAsync(u => u.HashedEmail == emailHash))
                 return BadRequest(new { Message = "This email is already in use" });
 
             // encrypt

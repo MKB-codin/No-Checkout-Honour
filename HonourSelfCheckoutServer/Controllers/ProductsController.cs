@@ -35,16 +35,26 @@ namespace HonourSelfCheckoutServer.Controllers
         public async Task<IActionResult> GetProductByBarcode(string barcode, [FromQuery] int storeId)
         {
             Console.WriteLine($"Barcode received {barcode}");
-            // Query the junction table to get the product for the given barcode and store.
+
+            var allStoreProducts = await _databaseContext.StoreProducts
+                                        .Include(sp => sp.Product)
+                                        .ToListAsync();  // Fetch all store products for debugging
+
+            foreach (var sp in allStoreProducts)
+            {
+                Console.WriteLine($"DB Entry - StoreId: {sp.StoreId}, ProductId: {sp.ProductId}, Barcode: {sp.Product.BarcodeId}, Price: {sp.Price}");
+            }
+
             var storeProduct = await _databaseContext.StoreProducts
-                                    .Include(sp => sp.Product)
-                                    .FirstOrDefaultAsync(sp => sp.Product.BarcodeId == barcode && sp.StoreId == storeId);
+                                        .Include(sp => sp.Product)
+                                        .FirstOrDefaultAsync(sp => sp.Product.BarcodeId == barcode && sp.StoreId == storeId);
 
             if (storeProduct == null)
             {
                 Console.WriteLine("Product not found for the selected store.");
                 return NotFound(new { Message = "Product not found for the selected store." });
             }
+
 
             // Return a response that includes product details and the store-specific price.
             var response = new

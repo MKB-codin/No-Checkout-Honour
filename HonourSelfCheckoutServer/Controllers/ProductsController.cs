@@ -18,19 +18,6 @@ namespace HonourSelfCheckoutServer.Controllers
         }
 
 
-        /*        [HttpGet("{barcode}")]
-                public async Task<IActionResult> GetProductByBarcode(string barcode)
-                {
-                    Console.WriteLine($"Barcode received {barcode}");
-                    var product = await _databaseContext.Products.FirstOrDefaultAsync( p => p.BarcodeId == barcode);
-                    if (product == null)
-                    {
-                        return NotFound(new { Message = "Product not found" });
-                    }
-
-                    return Ok(product);
-                }*/ //Depreciated because we need to get the product for a specific store.
-
         [HttpGet("GetProductByBarcode/{barcode}")]
         public async Task<IActionResult> GetProductByBarcode(string barcode, [FromQuery] int storeId)
         {

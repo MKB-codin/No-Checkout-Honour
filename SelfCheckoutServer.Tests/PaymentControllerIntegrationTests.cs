@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Testing;
 using SelfCheckoutServer.Tests.Factories;
 using Xunit;
-using HonourSelfCheckoutServer; // Adjust to your server project's namespace
+using HonourSelfCheckoutServer;
 
 namespace SelfCheckoutServer.Tests
 {
@@ -21,7 +21,7 @@ namespace SelfCheckoutServer.Tests
         [Fact]
         public async Task CreatePaymentIntent_WithValidData_ReturnsClientSecret()
         {
-            // Arrange: Create a checkout request payload.
+
             var checkoutRequest = new
             {
                 UserId = 1,
@@ -29,11 +29,11 @@ namespace SelfCheckoutServer.Tests
                 Total = 12.34
             };
 
-            // Act: Send a POST request to create a Payment Intent.
+
             var response = await _client.PostAsJsonAsync("/api/Payment/CreatePaymentIntent", checkoutRequest);
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            // Assert: Verify that the response contains a non-empty client secret.
+
             var json = await response.Content.ReadFromJsonAsync<JsonElement>();
             string clientSecret;
             if (json.TryGetProperty("clientSecret", out JsonElement prop))
@@ -54,7 +54,7 @@ namespace SelfCheckoutServer.Tests
         [Fact]
         public async Task FinalizeCheckout_WithValidData_ReturnsCheckoutSuccessful()
         {
-            // Arrange: Create a checkout finalization payload.
+
             var checkoutFinalizationRequest = new
             {
                 UserId = 1,
@@ -66,11 +66,10 @@ namespace SelfCheckoutServer.Tests
                 }
             };
 
-            // Act: Send a POST request to finalize the checkout.
+
             var response = await _client.PostAsJsonAsync("/api/Payment/FinalizeCheckout", checkoutFinalizationRequest);
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            // Assert: Verify that the response contains a success message and a valid ReceiptId.
             var json = await response.Content.ReadFromJsonAsync<JsonElement>();
             string message;
             if (json.TryGetProperty("message", out JsonElement prop))
@@ -106,7 +105,7 @@ namespace SelfCheckoutServer.Tests
         [Fact]
         public async Task CreateCheckoutSession_WithValidData_ReturnsUrl()
         {
-            // Arrange: Create a checkout session request payload.
+
             var checkoutSessionRequest = new
             {
                 UserId = 1,
@@ -116,11 +115,11 @@ namespace SelfCheckoutServer.Tests
                 CancelUrl = "https://example.com/cancel"
             };
 
-            // Act: Send a POST request to create a checkout session.
+
             var response = await _client.PostAsJsonAsync("/api/Payment/CreateCheckoutSession", checkoutSessionRequest);
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            // Assert: Verify that the response contains a non-empty URL.
+
             var json = await response.Content.ReadFromJsonAsync<JsonElement>();
             string url;
             if (json.TryGetProperty("url", out JsonElement prop))
@@ -141,11 +140,11 @@ namespace SelfCheckoutServer.Tests
         [Fact]
         public async Task PaymentSuccessEndpoint_ReturnsSuccessMessage()
         {
-            // Act: Send a GET request to the payment-success endpoint.
+
             var response = await _client.GetAsync("/api/Payment/payment-success");
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            // Assert: Verify that the response message is as expected.
+
             var json = await response.Content.ReadFromJsonAsync<JsonElement>();
             string message;
             if (json.TryGetProperty("message", out JsonElement prop))
@@ -166,11 +165,11 @@ namespace SelfCheckoutServer.Tests
         [Fact]
         public async Task PaymentCancelEndpoint_ReturnsCancelMessage()
         {
-            // Act: Send a GET request to the payment-cancel endpoint.
+
             var response = await _client.GetAsync("/api/Payment/payment-cancel");
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            // Assert: Verify that the response message is as expected.
+
             var json = await response.Content.ReadFromJsonAsync<JsonElement>();
             string message;
             if (json.TryGetProperty("message", out JsonElement prop))

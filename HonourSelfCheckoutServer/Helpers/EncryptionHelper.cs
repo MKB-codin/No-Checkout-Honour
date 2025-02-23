@@ -21,10 +21,10 @@ namespace HonourSelfCheckoutServer.Helpers
             using (Aes aes = Aes.Create())
             {
                 aes.Key = Encoding.UTF8.GetBytes(Key);
-                aes.GenerateIV(); // Generates a unique IV for each encryption
+                aes.GenerateIV(); 
                 using (MemoryStream memoryStream = new MemoryStream())
                 {
-                    memoryStream.Write(aes.IV, 0, aes.IV.Length); // Store IV at start of message
+                    memoryStream.Write(aes.IV, 0, aes.IV.Length); 
                     using (CryptoStream cryptoStream = new CryptoStream(memoryStream, aes.CreateEncryptor(), CryptoStreamMode.Write))
                     {
                         byte[] plainBytes = Encoding.UTF8.GetBytes(plainText);

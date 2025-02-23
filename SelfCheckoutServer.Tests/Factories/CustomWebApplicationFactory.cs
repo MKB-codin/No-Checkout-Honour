@@ -16,11 +16,11 @@ namespace SelfCheckoutServer.Tests.Factories
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
-            // Force the environment to be "Testing"
+
             builder.UseEnvironment("Testing");
             System.Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Testing");
 
-            // Override service registrations for testing.
+
             builder.ConfigureTestServices(services =>
             {
 
@@ -32,10 +32,10 @@ namespace SelfCheckoutServer.Tests.Factories
                     services.Remove(descriptor);
                 }
 
-                // Register the DatabaseContext using the InMemory provider.
+
                 services.AddDbContext<DatabaseContext>(options =>
                 {
-                    // Use a unique database name for isolation.
+
                     options.UseInMemoryDatabase("TestDatabase_");
                 });
 
@@ -44,7 +44,7 @@ namespace SelfCheckoutServer.Tests.Factories
                 using (var scope = sp.CreateScope())
                 {
                     var db = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
-                    // Ensure a fresh database each time.
+
                     db.Database.EnsureDeleted();
                     db.Database.EnsureCreated();
                     SeedTestData(db);
@@ -62,7 +62,7 @@ namespace SelfCheckoutServer.Tests.Factories
                     Location = "123 Test Street"
                 };
                 db.Stores.Add(store);
-                db.SaveChanges();  // Ensure store ID is generated
+                db.SaveChanges(); 
 
                 var product = new Product
                 {
@@ -70,7 +70,7 @@ namespace SelfCheckoutServer.Tests.Factories
                     BarcodeId = "1111111111111"
                 };
                 db.Products.Add(product);
-                db.SaveChanges();  // Ensure product ID is generated
+                db.SaveChanges(); 
 
                 var storeProduct = new StoreProduct
                 {
@@ -81,7 +81,7 @@ namespace SelfCheckoutServer.Tests.Factories
                 db.StoreProducts.Add(storeProduct);
 
                 string email = "testuser@example.com";
-                string hashedPassword = HashHelper.Hash("TestPassword123"); // Hash the password for testing
+                string hashedPassword = HashHelper.Hash("TestPassword123");
 
                 var user = new User
                 {
@@ -89,11 +89,11 @@ namespace SelfCheckoutServer.Tests.Factories
                     Email = EncryptionHelper.Encrypt(email),
                     Phone = EncryptionHelper.Encrypt("1234567890"),
                     Password = hashedPassword,
-                    HashedEmail = HashHelper.Hash(email) // Store hashed email for lookups
+                    HashedEmail = HashHelper.Hash(email)
                 };
 
                 db.Users.Add(user);
-                db.SaveChanges(); // Ensure UserId is generated
+                db.SaveChanges(); 
             }
         }
 

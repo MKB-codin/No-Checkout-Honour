@@ -449,3 +449,4 @@ C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutServer.Test
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutServer.Tests\obj\Debug\net9.0\SelfCheckoutServer.Tests.pdb
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutServer.Tests\obj\Debug\net9.0\SelfCheckoutServer.Tests.genruntimeconfig.cache
 C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutServer.Tests\obj\Debug\net9.0\ref\SelfCheckoutServer.Tests.dll
+C:\Users\mkbof\source\repos\MKB-codin\No-Checkout-Honour\SelfCheckoutServer.Tests\bin\Debug\net9.0\xunit.runner.json

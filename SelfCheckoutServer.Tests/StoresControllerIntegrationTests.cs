@@ -39,7 +39,7 @@ namespace SelfCheckoutServer.Tests
 
 
         [Fact]
-        public async Task GetNearestStores_ReturnsStoresSortedByDistance_UK()
+        public async Task GetNearestStores_ReturnsStoresSortedByDistance()
         {
             using (var scope = _factory.Services.CreateScope())
             {

@@ -35,8 +35,7 @@ namespace SelfCheckoutServer.Tests.Factories
 
                 services.AddDbContext<DatabaseContext>(options =>
                 {
-
-                    options.UseInMemoryDatabase("TestDatabase_");
+                    options.UseInMemoryDatabase("TestDatabase");
                 });
 
                 // Build the service provider.

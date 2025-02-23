@@ -20,13 +20,13 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '9.0.x' 
 
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Restore dependencies (server solution)
+        run: dotnet restore HonourSelfCheckoutServer/HonourSelfCheckoutServer.sln
 
-      - name: Build solution
-        run: dotnet build --no-restore --configuration Release
+      - name: Build server solution
+        run: dotnet build HonourSelfCheckoutServer/HonourSelfCheckoutServer.sln --no-restore --configuration Release
 
-      - name: Run tests
-        run: dotnet test --no-build --verbosity normal
+      - name: Run integration tests
+        run: dotnet test SelfCheckoutServer.Tests/SelfCheckoutServer.Tests.csproj --no-build --verbosity normal

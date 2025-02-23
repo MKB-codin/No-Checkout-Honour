@@ -1,4 +1,4 @@
-name: CI
+name: CI Pipeline
 
 on:
   push:
@@ -14,19 +14,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0.x' 
+          dotnet-version: '9.0.x'
 
-      - name: Restore dependencies (server solution)
+      - name: Restore Dependencies (Server Solution)
         run: dotnet restore HonourSelfCheckoutServer/HonourSelfCheckoutServer.sln
 
-      - name: Build server solution
+      - name: Build Server Solution
         run: dotnet build HonourSelfCheckoutServer/HonourSelfCheckoutServer.sln --no-restore --configuration Release
 
-      - name: Run integration tests
-        run: dotnet test SelfCheckoutServer.Tests/SelfCheckoutServer.Tests.csproj --no-build --verbosity normal
+      - name: Run Integration Tests
+        run: |
+          mkdir -p test-results
+          dotnet test SelfCheckoutServer.Tests/SelfCheckoutServer.Tests.csproj --no-build --configuration Release --verbosity detailed --logger "trx;LogFileName=test-results/test_results.trx"
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/test_results.trx

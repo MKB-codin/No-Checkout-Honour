@@ -32,13 +32,21 @@ jobs:
         id: test
         continue-on-error: true
         run: |
-          # Create folder for test results
-          mkdir -p test-results
-          # Run tests with TRX logger; output file in the test-results folder
-          dotnet test SelfCheckoutServer.Tests/SelfCheckoutServer.Tests.csproj --no-build --configuration Release --verbosity detailed --logger "trx;LogFileName=./test-results/test_results.trx"
+          # Run tests with TRX logger (default file name)
+          dotnet test SelfCheckoutServer.Tests/SelfCheckoutServer.Tests.csproj --no-build --configuration Release --verbosity detailed --logger "trx"
 
-      - name: List test-results directory
-        run: ls -la test-results
+      - name: Find and Move TRX File
+        run: |
+          mkdir -p test-results
+          # Search for the TRX file (look in current directory and one level deep)
+          trx_file=$(find . -maxdepth 2 -type f -name "*.trx" | head -n 1)
+          echo "Found TRX file: $trx_file"
+          if [ -n "$trx_file" ]; then
+              mv "$trx_file" test-results/test_results.trx
+          else
+              echo "No TRX file found!"
+          fi
+          ls -la test-results
 
       - name: Upload Test Results
         if: always()

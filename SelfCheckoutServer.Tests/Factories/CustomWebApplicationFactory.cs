@@ -54,49 +54,44 @@ namespace SelfCheckoutServer.Tests.Factories
 
         private void SeedTestData(DatabaseContext db)
         {
-            if (!db.Stores.Any())
+            var store = new Store
             {
-                var store = new Store
-                {
-                    StoreName = "Test Store",
-                    Location = "123 Test Street"
-                };
-                db.Stores.Add(store);
-                db.SaveChanges(); 
+                StoreName = "Test Store",
+                Location = "123 Test Street"
+            };
+            db.Stores.Add(store);
+            db.SaveChanges(); 
 
-                var product = new Product
-                {
-                    ProductName = "Test Product",
-                    BarcodeId = "1111111111111"
-                };
-                db.Products.Add(product);
-                db.SaveChanges(); 
+            var product = new Product
+            {
+                ProductName = "Test Product",
+                BarcodeId = "1111111111111"
+            };
+            db.Products.Add(product);
+            db.SaveChanges(); 
 
-                var storeProduct = new StoreProduct
-                {
-                    StoreId = store.StoreId,
-                    ProductId = product.ProductId,
-                    Price = 9.99m
-                };
-                db.StoreProducts.Add(storeProduct);
+            var storeProduct = new StoreProduct
+            {
+                StoreId = store.StoreId,
+                ProductId = product.ProductId,
+                Price = 9.99m
+            };
+            db.StoreProducts.Add(storeProduct);
 
-                string email = "testuser@example.com";
-                string hashedPassword = HashHelper.Hash("TestPassword123");
+            string email = "testuser@example.com";
+            string hashedPassword = HashHelper.Hash("TestPassword123");
 
-                var user = new User
-                {
-                    Name = EncryptionHelper.Encrypt("Test User"),
-                    Email = EncryptionHelper.Encrypt(email),
-                    Phone = EncryptionHelper.Encrypt("1234567890"),
-                    Password = hashedPassword,
-                    HashedEmail = HashHelper.Hash(email)
-                };
+            var user = new User
+            {
+                Name = EncryptionHelper.Encrypt("Test User"),
+                Email = EncryptionHelper.Encrypt(email),
+                Phone = EncryptionHelper.Encrypt("1234567890"),
+                Password = hashedPassword,
+                HashedEmail = HashHelper.Hash(email)
+            };
 
-                db.Users.Add(user);
-                db.SaveChanges(); 
-            }
+            db.Users.Add(user);
+            db.SaveChanges(); 
         }
-
-
     }
 }

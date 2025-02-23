@@ -29,9 +29,16 @@ jobs:
         run: dotnet build HonourSelfCheckoutServer/HonourSelfCheckoutServer.sln --no-restore --configuration Release
 
       - name: Run Integration Tests
+        id: test
+        continue-on-error: true
         run: |
+          # Create folder for test results
           mkdir -p test-results
-          dotnet test SelfCheckoutServer.Tests/SelfCheckoutServer.Tests.csproj --no-build --configuration Release --verbosity detailed --logger "trx;LogFileName=test-results/test_results.trx"
+          # Run tests with TRX logger; output file in the test-results folder
+          dotnet test SelfCheckoutServer.Tests/SelfCheckoutServer.Tests.csproj --no-build --configuration Release --verbosity detailed --logger "trx;LogFileName=./test-results/test_results.trx"
+
+      - name: List test-results directory
+        run: ls -la test-results
 
       - name: Upload Test Results
         if: always()
@@ -39,3 +46,7 @@ jobs:
         with:
           name: test-results
           path: test-results/test_results.trx
+
+      - name: Fail if tests failed
+        if: steps.test.outcome != 'success'
+        run: exit 1

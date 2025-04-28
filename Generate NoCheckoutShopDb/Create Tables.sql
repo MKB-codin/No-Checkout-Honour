@@ -1,0 +1,54 @@
+-- USERS TABLE
+CREATE TABLE Users (
+    UserId INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    Phone NVARCHAR(20) NOT NULL,
+    HashedEmail NVARCHAR(256) NOT NULL,
+    Password NVARCHAR(256) NOT NULL
+);
+
+-- PRODUCTS TABLE
+CREATE TABLE Products (
+    ProductId INT IDENTITY(1,1) PRIMARY KEY,
+    ProductName NVARCHAR(100) NOT NULL,
+    BarcodeId NVARCHAR(50) NOT NULL
+);
+
+-- STORES TABLE
+CREATE TABLE Stores (
+    StoreId INT IDENTITY(1,1) PRIMARY KEY,
+    StoreName NVARCHAR(100) NOT NULL,
+    Location NVARCHAR(255) NOT NULL
+);
+
+-- STOREPRODUCT TABLE (many-to-many: Stores x Products)
+CREATE TABLE StoreProducts (
+    StoreProductId INT IDENTITY(1,1) PRIMARY KEY,
+    StoreId INT NOT NULL,
+    ProductId INT NOT NULL,
+    Price DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (StoreId) REFERENCES Stores(StoreId),
+    FOREIGN KEY (ProductId) REFERENCES Products(ProductId)
+);
+
+-- RECEIPTS TABLE
+CREATE TABLE Receipts (
+    ReceiptId INT IDENTITY(1,1) PRIMARY KEY,
+    StoreId INT NOT NULL,
+    UserId INT NOT NULL,
+    Total DECIMAL(10,2) NOT NULL,
+    PurchaseDate DATETIME NOT NULL DEFAULT GETDATE(),
+    FOREIGN KEY (StoreId) REFERENCES Stores(StoreId),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId)
+);
+
+-- RECEIPTITEMS TABLE
+CREATE TABLE ReceiptItems (
+    ItemId INT IDENTITY(1,1) PRIMARY KEY,
+    ReceiptId INT NOT NULL,
+    ProductId INT NOT NULL,
+    Quantity INT NOT NULL,
+    FOREIGN KEY (ReceiptId) REFERENCES Receipts(ReceiptId),
+    FOREIGN KEY (ProductId) REFERENCES Products(ProductId)
+);

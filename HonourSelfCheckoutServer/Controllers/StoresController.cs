@@ -17,7 +17,7 @@ namespace HonourSelfCheckoutServer.Controllers
     public class StoresController : ControllerBase
     {
         private readonly DatabaseContext _databaseContext;
-        private const string GoogleGeocodingApiKey = "AIzaSyBvR3a8ZinM40HwLm7hp2mEX2hPTGlDERQ";
+        private const string GoogleGeocodingApiKey = "";
 
         private const string GeocodingApiUrl = "https://maps.googleapis.com/maps/api/geocode/json";
 
